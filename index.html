@@ -1,0 +1,1155 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>UNI TRIP｜大学生の格安旅行ガイド</title>
+
+  <meta name="description"
+        content="大学生のための格安旅行ガイド。安くて映える海外旅行、航空券、ホテル、eSIMなどを紹介します。">
+
+  <style>
+
+    /* =========================
+       全体
+    ========================= */
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family:
+        -apple-system,
+        BlinkMacSystemFont,
+        "Helvetica Neue",
+        "Hiragino Kaku Gothic ProN",
+        "Yu Gothic",
+        sans-serif;
+
+      background: #f7f8fa;
+      color: #111;
+      line-height: 1.7;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+
+    /* =========================
+       ヘッダー
+    ========================= */
+
+    header {
+      background: white;
+      border-bottom: 1px solid #eee;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .header-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 18px 20px;
+
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo {
+      font-size: 25px;
+      font-weight: 900;
+      letter-spacing: 1px;
+    }
+
+    .logo span {
+      color: #ff5c35;
+    }
+
+    nav {
+      display: flex;
+      gap: 25px;
+      font-size: 14px;
+      font-weight: 700;
+    }
+
+    nav a:hover {
+      color: #ff5c35;
+    }
+
+
+    /* =========================
+       ヒーロー
+    ========================= */
+
+    .hero {
+      background:
+        linear-gradient(
+          135deg,
+          #111 0%,
+          #252525 100%
+        );
+
+      color: white;
+      padding: 90px 20px;
+    }
+
+    .hero-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .hero-label {
+      display: inline-block;
+
+      background: #ff5c35;
+      color: white;
+
+      padding: 6px 12px;
+      border-radius: 30px;
+
+      font-size: 12px;
+      font-weight: 800;
+
+      margin-bottom: 20px;
+    }
+
+    .hero h1 {
+      font-size: clamp(40px, 8vw, 78px);
+      line-height: 1.05;
+      letter-spacing: -3px;
+      margin-bottom: 25px;
+    }
+
+    .hero h1 span {
+      color: #ff7655;
+    }
+
+    .hero p {
+      font-size: 18px;
+      color: #ddd;
+      margin-bottom: 35px;
+    }
+
+    .hero-buttons {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .button {
+      display: inline-block;
+
+      padding: 13px 22px;
+
+      border-radius: 10px;
+
+      font-weight: 800;
+      font-size: 14px;
+    }
+
+    .button-primary {
+      background: #ff5c35;
+      color: white;
+    }
+
+    .button-secondary {
+      background: white;
+      color: #111;
+    }
+
+
+    /* =========================
+       共通セクション
+    ========================= */
+
+    section {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 70px 20px;
+    }
+
+    .section-title {
+      font-size: 30px;
+      font-weight: 900;
+      margin-bottom: 10px;
+    }
+
+    .section-description {
+      color: #777;
+      margin-bottom: 30px;
+    }
+
+
+    /* =========================
+       検索カード
+    ========================= */
+
+    .search-area {
+      margin-top: -35px;
+      position: relative;
+    }
+
+    .search-box {
+      background: white;
+      padding: 25px;
+
+      border-radius: 18px;
+
+      box-shadow:
+        0 10px 35px rgba(0,0,0,0.08);
+    }
+
+    .search-box h2 {
+      font-size: 20px;
+      margin-bottom: 18px;
+    }
+
+    .search-buttons {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 12px;
+    }
+
+    .search-button {
+      background: #f3f4f6;
+      padding: 15px;
+      border-radius: 12px;
+
+      text-align: center;
+      font-weight: 800;
+
+      transition: 0.2s;
+    }
+
+    .search-button:hover {
+      background: #111;
+      color: white;
+      transform: translateY(-2px);
+    }
+
+
+    /* =========================
+       旅行先カード
+    ========================= */
+
+    .destination-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    .destination-card {
+      background: white;
+      border-radius: 16px;
+      overflow: hidden;
+
+      box-shadow:
+        0 5px 20px rgba(0,0,0,0.05);
+
+      transition: 0.2s;
+    }
+
+    .destination-card:hover {
+      transform: translateY(-4px);
+    }
+
+    .destination-image {
+      height: 180px;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      background:
+        linear-gradient(
+          135deg,
+          #ddd,
+          #aaa
+        );
+
+      font-size: 55px;
+    }
+
+    .destination-content {
+      padding: 18px;
+    }
+
+    .destination-content h3 {
+      font-size: 20px;
+      margin-bottom: 5px;
+    }
+
+    .destination-content p {
+      color: #777;
+      font-size: 13px;
+    }
+
+    .price {
+      margin-top: 12px;
+      font-weight: 900;
+      color: #ff5c35;
+    }
+
+
+    /* =========================
+       カテゴリー
+    ========================= */
+
+    .category-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 15px;
+    }
+
+    .category-card {
+      background: white;
+
+      border-radius: 15px;
+      padding: 25px;
+
+      border: 1px solid #eee;
+
+      transition: 0.2s;
+    }
+
+    .category-card:hover {
+      border-color: #111;
+      transform: translateY(-3px);
+    }
+
+    .category-icon {
+      font-size: 32px;
+      margin-bottom: 10px;
+    }
+
+    .category-card h3 {
+      margin-bottom: 5px;
+    }
+
+    .category-card p {
+      color: #777;
+      font-size: 13px;
+    }
+
+
+    /* =========================
+       ピックアップ
+    ========================= */
+
+    .pickup {
+      background: #111;
+      color: white;
+
+      border-radius: 20px;
+
+      padding: 35px;
+    }
+
+    .pickup-label {
+      color: #ff7655;
+      font-size: 12px;
+      font-weight: 900;
+      letter-spacing: 1px;
+    }
+
+    .pickup h2 {
+      font-size: 32px;
+      margin: 10px 0;
+    }
+
+    .pickup p {
+      color: #ccc;
+    }
+
+
+    /* =========================
+       記事
+    ========================= */
+
+    .article-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    .article-card {
+      background: white;
+      padding: 22px;
+
+      border-radius: 15px;
+
+      border: 1px solid #eee;
+    }
+
+    .article-card .tag {
+      display: inline-block;
+
+      font-size: 11px;
+      font-weight: 800;
+
+      background: #f1f1f1;
+
+      padding: 4px 8px;
+      border-radius: 20px;
+
+      margin-bottom: 12px;
+    }
+
+    .article-card h3 {
+      font-size: 18px;
+      margin-bottom: 8px;
+    }
+
+    .article-card p {
+      color: #777;
+      font-size: 13px;
+    }
+
+
+    /* =========================
+       フッター
+    ========================= */
+
+    footer {
+      background: #111;
+      color: white;
+
+      padding: 45px 20px;
+
+      text-align: center;
+    }
+
+    .footer-logo {
+      font-size: 25px;
+      font-weight: 900;
+      margin-bottom: 10px;
+    }
+
+    footer p {
+      color: #aaa;
+      font-size: 12px;
+    }
+
+
+    /* =========================
+       スマホ対応
+    ========================= */
+
+    @media (max-width: 768px) {
+
+      nav {
+        display: none;
+      }
+
+      .hero {
+        padding: 65px 20px;
+      }
+
+      .hero h1 {
+        letter-spacing: -2px;
+      }
+
+      .search-buttons {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .destination-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .category-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .article-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .destination-image {
+        height: 130px;
+      }
+
+    }
+
+
+    @media (max-width: 480px) {
+
+      .destination-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero p {
+        font-size: 16px;
+      }
+
+      section {
+        padding: 50px 15px;
+      }
+
+    }
+
+  </style>
+</head>
+
+
+<body>
+
+
+<!-- =========================
+     ヘッダー
+========================= -->
+
+<header>
+
+  <div class="header-inner">
+
+    <a href="#" class="logo">
+      UNI<span>TRIP</span>
+    </a>
+
+    <nav>
+      <a href="#destination">行き先</a>
+      <a href="#budget">予算</a>
+      <a href="#hotel">ホテル</a>
+      <a href="#article">記事</a>
+    </nav>
+
+  </div>
+
+</header>
+
+
+
+<!-- =========================
+     ヒーロー
+========================= -->
+
+<div class="hero">
+
+  <div class="hero-inner">
+
+    <div class="hero-label">
+      FOR UNIVERSITY STUDENTS
+    </div>
+
+    <h1>
+      大学生の旅を、<br>
+      <span>もっと安く。</span>
+    </h1>
+
+    <p>
+      安くて、楽しくて、ちょっと映える。<br>
+      大学生向けの格安旅行を見つけよう。
+    </p>
+
+    <div class="hero-buttons">
+
+      <a href="#destination"
+         class="button button-primary">
+        🌏 行き先を探す
+      </a>
+
+      <a href="#budget"
+         class="button button-secondary">
+        💰 予算から探す
+      </a>
+
+    </div>
+
+  </div>
+
+</div>
+
+
+
+<!-- =========================
+     検索
+========================= -->
+
+<div class="search-area">
+
+  <section>
+
+    <div class="search-box">
+
+      <h2>
+        🔎 どんな旅を探す？
+      </h2>
+
+      <div class="search-buttons">
+
+        <a href="#destination"
+           class="search-button">
+          🌏 行き先
+        </a>
+
+        <a href="#budget"
+           class="search-button">
+          💰 予算
+        </a>
+
+        <a href="#hotel"
+           class="search-button">
+          🏨 ホテル
+        </a>
+
+        <a href="#article"
+           class="search-button">
+          📝 旅行記事
+        </a>
+
+      </div>
+
+    </div>
+
+  </section>
+
+</div>
+
+
+
+<!-- =========================
+     行き先
+========================= -->
+
+<section id="destination">
+
+  <h2 class="section-title">
+    🌏 人気の行き先
+  </h2>
+
+  <p class="section-description">
+    大学生におすすめの海外旅行先をチェック。
+  </p>
+
+
+  <div class="destination-grid">
+
+
+    <a href="#" class="destination-card">
+
+      <div class="destination-image">
+        🇰🇷
+      </div>
+
+      <div class="destination-content">
+
+        <h3>韓国</h3>
+
+        <p>
+          東京から気軽に行ける海外旅行。
+        </p>
+
+        <div class="price">
+          ¥○○,○○○〜
+        </div>
+
+      </div>
+
+    </a>
+
+
+    <a href="#" class="destination-card">
+
+      <div class="destination-image">
+        🇹🇼
+      </div>
+
+      <div class="destination-content">
+
+        <h3>台湾</h3>
+
+        <p>
+          グルメも観光も楽しめる定番旅。
+        </p>
+
+        <div class="price">
+          ¥○○,○○○〜
+        </div>
+
+      </div>
+
+    </a>
+
+
+    <a href="#" class="destination-card">
+
+      <div class="destination-image">
+        🇻🇳
+      </div>
+
+      <div class="destination-content">
+
+        <h3>ベトナム</h3>
+
+        <p>
+          コスパ重視の大学生旅に。
+        </p>
+
+        <div class="price">
+          ¥○○,○○○〜
+        </div>
+
+      </div>
+
+    </a>
+
+
+    <a href="#" class="destination-card">
+
+      <div class="destination-image">
+        🇹🇭
+      </div>
+
+      <div class="destination-content">
+
+        <h3>タイ</h3>
+
+        <p>
+          バンコクから始める東南アジア旅。
+        </p>
+
+        <div class="price">
+          ¥○○,○○○〜
+        </div>
+
+      </div>
+
+    </a>
+
+
+    <a href="#" class="destination-card">
+
+      <div class="destination-image">
+        🇱🇦
+      </div>
+
+      <div class="destination-content">
+
+        <h3>ラオス</h3>
+
+        <p>
+          ゆっくり旅したい人におすすめ。
+        </p>
+
+        <div class="price">
+          ¥○○,○○○〜
+        </div>
+
+      </div>
+
+    </a>
+
+
+    <a href="#" class="destination-card">
+
+      <div class="destination-image">
+        🇪🇺
+      </div>
+
+      <div class="destination-content">
+
+        <h3>ヨーロッパ</h3>
+
+        <p>
+          卒業旅行にもおすすめ。
+        </p>
+
+        <div class="price">
+          ¥○○,○○○〜
+        </div>
+
+      </div>
+
+    </a>
+
+
+  </div>
+
+</section>
+
+
+
+<!-- =========================
+     予算
+========================= -->
+
+<section id="budget">
+
+  <h2 class="section-title">
+    💰 予算から探す
+  </h2>
+
+  <p class="section-description">
+    あなたの予算に合わせて旅行を探そう。
+  </p>
+
+
+  <div class="category-grid">
+
+
+    <a href="#" class="category-card">
+
+      <div class="category-icon">
+        💸
+      </div>
+
+      <h3>
+        3万円以下
+      </h3>
+
+      <p>
+        とにかく安く海外へ。
+      </p>
+
+    </a>
+
+
+    <a href="#" class="category-card">
+
+      <div class="category-icon">
+        💴
+      </div>
+
+      <h3>
+        5万円以下
+      </h3>
+
+      <p>
+        コスパ重視の海外旅行。
+      </p>
+
+    </a>
+
+
+    <a href="#" class="category-card">
+
+      <div class="category-icon">
+        💰
+      </div>
+
+      <h3>
+        7万円以下
+      </h3>
+
+      <p>
+        ホテルにも少しこだわる。
+      </p>
+
+    </a>
+
+
+    <a href="#" class="category-card">
+
+      <div class="category-icon">
+        ✈️
+      </div>
+
+      <h3>
+        10万円以下
+      </h3>
+
+      <p>
+        少し遠くまで旅してみる。
+      </p>
+
+    </a>
+
+
+  </div>
+
+</section>
+
+
+
+<!-- =========================
+     PICK UP
+========================= -->
+
+<section>
+
+  <div class="pickup">
+
+    <div class="pickup-label">
+      UNI TRIP PICK UP
+    </div>
+
+    <h2>
+      大学生の海外旅行、
+      どこ行く？
+    </h2>
+
+    <p>
+      航空券・ホテル・現地費用を比較して、
+      自分に合った旅を見つけよう。
+    </p>
+
+  </div>
+
+</section>
+
+
+
+<!-- =========================
+     ホテル
+========================= -->
+
+<section id="hotel">
+
+  <h2 class="section-title">
+    🏨 安くて映えるホテル
+  </h2>
+
+  <p class="section-description">
+    大学生でも泊まりやすいホテルを紹介予定。
+  </p>
+
+
+  <div class="category-grid">
+
+
+    <a href="#" class="category-card">
+
+      <div class="category-icon">
+        🏨
+      </div>
+
+      <h3>
+        韓国のホテル
+      </h3>
+
+      <p>
+        ソウルで泊まりたいホテル。
+      </p>
+
+    </a>
+
+
+    <a href="#" class="category-card">
+
+      <div class="category-icon">
+        🌴
+      </div>
+
+      <h3>
+        東南アジアのホテル
+      </h3>
+
+      <p>
+        コスパと雰囲気を両立。
+      </p>
+
+    </a>
+
+
+    <a href="#" class="category-card">
+
+      <div class="category-icon">
+        📸
+      </div>
+
+      <h3>
+        映えるホテル
+      </h3>
+
+      <p>
+        写真を撮りたくなるホテル。
+      </p>
+
+    </a>
+
+
+  </div>
+
+</section>
+
+
+
+<!-- =========================
+     旅行アイテム
+========================= -->
+
+<section>
+
+  <h2 class="section-title">
+    🎒 旅に持っていきたいもの
+  </h2>
+
+  <p class="section-description">
+    eSIMや便利な旅行グッズを紹介予定。
+  </p>
+
+
+  <div class="category-grid">
+
+
+    <a href="#" class="category-card">
+
+      <div class="category-icon">
+        📱
+      </div>
+
+      <h3>
+        eSIM
+      </h3>
+
+      <p>
+        海外でもスマホを使おう。
+      </p>
+
+    </a>
+
+
+    <a href="#" class="category-card">
+
+      <div class="category-icon">
+        🔋
+      </div>
+
+      <h3>
+        モバイルバッテリー
+      </h3>
+
+      <p>
+        長旅には必須アイテム。
+      </p>
+
+    </a>
+
+
+    <a href="#" class="category-card">
+
+      <div class="category-icon">
+        🎒
+      </div>
+
+      <h3>
+        旅行バッグ
+      </h3>
+
+      <p>
+        大学生バックパッカー向け。
+      </p>
+
+    </a>
+
+
+  </div>
+
+</section>
+
+
+
+<!-- =========================
+     記事
+========================= -->
+
+<section id="article">
+
+  <h2 class="section-title">
+    📝 UNI TRIP MAGAZINE
+  </h2>
+
+  <p class="section-description">
+    大学生のリアルな旅行情報。
+  </p>
+
+
+  <div class="article-grid">
+
+
+    <a href="#" class="article-card">
+
+      <div class="tag">
+        TRAVEL
+      </div>
+
+      <h3>
+        大学生が海外旅行にハマった理由
+      </h3>
+
+      <p>
+        初めての海外旅行から、バックパッカー旅へ。
+      </p>
+
+    </a>
+
+
+    <a href="#" class="article-card">
+
+      <div class="tag">
+        BUDGET
+      </div>
+
+      <h3>
+        大学生の海外旅行はいくらかかる？
+      </h3>
+
+      <p>
+        航空券・ホテル・食費などをまとめて紹介。
+      </p>
+
+    </a>
+
+
+    <a href="#" class="article-card">
+
+      <div class="tag">
+        BACKPACK
+      </div>
+
+      <h3>
+        初めてのバックパッカー旅
+      </h3>
+
+      <p>
+        荷物やルート、現地での過ごし方を紹介。
+      </p>
+
+    </a>
+
+
+  </div>
+
+</section>
+
+
+
+<!-- =========================
+     フッター
+========================= -->
+
+<footer>
+
+  <div class="footer-logo">
+    UNI TRIP
+  </div>
+
+  <p>
+    大学生の旅を、もっと安く。
+  </p>
+
+  <br>
+
+  <p>
+    © 2026 UNI TRIP
+  </p>
+
+</footer>
+
+
+</body>
+</html>
