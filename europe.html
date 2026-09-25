@@ -1,0 +1,1030 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="description" content="UNI TRIP｜ヨーロッパ旅行を大学生目線で紹介">
+<title>ヨーロッパ旅行｜UNI TRIP</title>
+
+<style>
+:root{
+  --blue:#2E7C8F;
+  --dark:#173F4A;
+  --light:#E8F3F5;
+  --cream:#F7F5EF;
+  --ink:#172124;
+  --muted:#6C777A;
+  --line:#DDE5E6;
+}
+
+*{
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  font-family:
+    -apple-system,
+    BlinkMacSystemFont,
+    "Helvetica Neue",
+    "Hiragino Kaku Gothic ProN",
+    "Yu Gothic",
+    sans-serif;
+  background:var(--cream);
+  color:var(--ink);
+  line-height:1.6;
+}
+
+a{
+  text-decoration:none;
+  color:inherit;
+}
+
+.container{
+  width:min(1180px,calc(100% - 32px));
+  margin:auto;
+}
+
+
+/* HEADER */
+
+header{
+  height:70px;
+  background:rgba(247,245,239,.96);
+  border-bottom:1px solid var(--line);
+  position:sticky;
+  top:0;
+  z-index:10;
+}
+
+.header{
+  height:100%;
+  display:flex;
+  align-items:center;
+  gap:35px;
+}
+
+.logo{
+  font-size:22px;
+  font-weight:900;
+  letter-spacing:.08em;
+  color:var(--dark);
+}
+
+.logo span{
+  color:var(--blue);
+}
+
+nav{
+  display:flex;
+  gap:27px;
+  flex:1;
+}
+
+nav a{
+  font-size:13px;
+  font-weight:700;
+  color:#506064;
+}
+
+nav a:hover{
+  color:var(--blue);
+}
+
+.back{
+  font-size:13px;
+  font-weight:800;
+  color:var(--blue);
+}
+
+
+/* HERO */
+
+.hero{
+  min-height:530px;
+  position:relative;
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(23,63,74,.72),
+      rgba(23,63,74,.12)
+    ),
+    url("images/europe.jpg") center/cover,
+    #2E7C8F;
+}
+
+.hero-inner{
+  min-height:530px;
+  display:flex;
+  align-items:center;
+}
+
+.hero-copy{
+  color:white;
+  width:680px;
+  padding:50px 0;
+}
+
+.eyebrow{
+  font-size:11px;
+  font-weight:800;
+  letter-spacing:.18em;
+  margin-bottom:14px;
+}
+
+.hero h1{
+  font-size:clamp(42px,5.5vw,68px);
+  line-height:1.08;
+  letter-spacing:-.05em;
+  margin-bottom:18px;
+}
+
+.lead{
+  font-size:16px;
+  color:rgba(255,255,255,.92);
+}
+
+
+/* COMMON */
+
+section{
+  padding:70px 0;
+}
+
+.head{
+  display:flex;
+  justify-content:space-between;
+  align-items:end;
+  margin-bottom:24px;
+}
+
+.kicker{
+  font-size:10px;
+  font-weight:900;
+  letter-spacing:.17em;
+  color:var(--blue);
+  margin-bottom:5px;
+}
+
+h2{
+  font-size:32px;
+  letter-spacing:-.04em;
+  line-height:1.2;
+}
+
+.desc{
+  font-size:13px;
+  color:var(--muted);
+  margin-top:6px;
+}
+
+
+/* CITIES */
+
+.cities{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:15px;
+}
+
+.city{
+  background:white;
+  border:1px solid var(--line);
+  border-radius:18px;
+  overflow:hidden;
+  transition:.25s;
+}
+
+.city:hover{
+  transform:translateY(-4px);
+  box-shadow:0 10px 30px rgba(0,0,0,.08);
+}
+
+.city-photo{
+  height:220px;
+  background-size:cover;
+  background-position:center;
+}
+
+.city-body{
+  padding:20px;
+}
+
+.city-body small{
+  color:var(--blue);
+  font-size:9px;
+  letter-spacing:.15em;
+  font-weight:900;
+}
+
+.city-body h3{
+  font-size:23px;
+  margin:6px 0;
+}
+
+.city-body p{
+  color:var(--muted);
+  font-size:12px;
+}
+
+
+/* EUROPE FEATURE */
+
+.feature{
+  background:var(--light);
+  border:1px solid #d4e7ea;
+  border-radius:22px;
+  padding:35px;
+}
+
+.feature-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:35px;
+  align-items:center;
+}
+
+.feature-copy h2{
+  margin-bottom:12px;
+}
+
+.feature-copy p{
+  color:var(--muted);
+  font-size:13px;
+}
+
+.feature-points{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:10px;
+  margin-top:20px;
+}
+
+.feature-point{
+  background:white;
+  border-radius:12px;
+  padding:15px;
+  border:1px solid var(--line);
+}
+
+.feature-point strong{
+  display:block;
+  font-size:14px;
+  margin-bottom:3px;
+}
+
+.feature-point span{
+  font-size:11px;
+  color:var(--muted);
+}
+
+
+/* BUDGET */
+
+.budget{
+  background:var(--light);
+  border:1px solid #d4e7ea;
+  border-radius:22px;
+  padding:30px;
+}
+
+.budget-inner{
+  display:flex;
+  align-items:center;
+  gap:30px;
+}
+
+.budget-title{
+  min-width:280px;
+}
+
+.budget-title h2{
+  font-size:25px;
+}
+
+.budget-title p{
+  font-size:12px;
+  color:var(--muted);
+  margin-top:5px;
+}
+
+.budget-list{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:10px;
+  flex:1;
+}
+
+.budget-card{
+  background:white;
+  border:1px solid var(--line);
+  border-radius:13px;
+  min-height:70px;
+  padding:0 16px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  font-size:14px;
+  font-weight:800;
+  transition:.2s;
+}
+
+.budget-card:hover{
+  border-color:var(--blue);
+  transform:translateY(-2px);
+}
+
+.arrow{
+  color:var(--blue);
+  font-size:18px;
+}
+
+
+/* TIPS */
+
+.tips{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:15px;
+}
+
+.tip{
+  background:white;
+  border:1px solid var(--line);
+  border-radius:18px;
+  padding:25px;
+}
+
+.tip-num{
+  font-size:11px;
+  font-weight:900;
+  color:var(--blue);
+  letter-spacing:.12em;
+}
+
+.tip h3{
+  font-size:19px;
+  margin:14px 0 7px;
+}
+
+.tip p{
+  font-size:12px;
+  color:var(--muted);
+}
+
+
+/* CTA */
+
+.cta{
+  background:var(--dark);
+  border-radius:22px;
+  padding:45px;
+  color:white;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:25px;
+}
+
+.cta h2{
+  font-size:28px;
+}
+
+.cta p{
+  font-size:12px;
+  color:rgba(255,255,255,.65);
+  margin-top:7px;
+}
+
+.cta-button{
+  background:white;
+  color:var(--dark);
+  padding:13px 22px;
+  border-radius:10px;
+  font-size:13px;
+  font-weight:900;
+  white-space:nowrap;
+}
+
+
+/* FOOTER */
+
+footer{
+  background:var(--dark);
+  color:white;
+  padding:38px 0;
+  margin-top:70px;
+}
+
+.footer{
+  display:flex;
+  justify-content:space-between;
+}
+
+.footer-logo{
+  font-size:22px;
+  font-weight:900;
+  letter-spacing:.08em;
+}
+
+footer p{
+  font-size:11px;
+  color:rgba(255,255,255,.6);
+  margin-top:4px;
+}
+
+
+/* TABLET */
+
+@media(max-width:900px){
+
+  nav{
+    gap:15px;
+  }
+
+  .cities{
+    grid-template-columns:1fr 1fr;
+  }
+
+  .feature-grid{
+    grid-template-columns:1fr;
+  }
+
+  .budget-inner{
+    display:block;
+  }
+
+  .budget-list{
+    margin-top:18px;
+  }
+
+  .tips{
+    grid-template-columns:1fr 1fr;
+  }
+}
+
+
+/* MOBILE */
+
+@media(max-width:650px){
+
+  .container{
+    width:calc(100% - 24px);
+  }
+
+  header{
+    height:62px;
+  }
+
+  nav{
+    display:none;
+  }
+
+  .header:after{
+    content:"☰";
+    margin-left:auto;
+    font-size:21px;
+  }
+
+  .hero,
+  .hero-inner{
+    min-height:520px;
+  }
+
+  .hero-inner{
+    align-items:flex-start;
+    padding-top:70px;
+  }
+
+  .hero-copy{
+    width:100%;
+  }
+
+  .hero h1{
+    font-size:43px;
+  }
+
+  section{
+    padding:52px 0;
+  }
+
+  h2{
+    font-size:27px;
+  }
+
+  .cities{
+    grid-template-columns:1fr;
+  }
+
+  .city-photo{
+    height:200px;
+  }
+
+  .feature{
+    padding:22px;
+  }
+
+  .feature-points{
+    grid-template-columns:1fr;
+  }
+
+  .budget{
+    padding:20px;
+  }
+
+  .budget-list{
+    grid-template-columns:1fr;
+  }
+
+  .tips{
+    grid-template-columns:1fr;
+  }
+
+  .cta{
+    display:block;
+    padding:30px;
+  }
+
+  .cta-button{
+    display:inline-block;
+    margin-top:20px;
+  }
+
+  .footer{
+    display:block;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+
+<header>
+
+  <div class="container header">
+
+    <a href="index.html" class="logo">
+      UNI<span>TRIP</span>
+    </a>
+
+    <nav>
+      <a href="index.html#destinations">行き先から探す</a>
+      <a href="index.html#flight">航空券</a>
+      <a href="index.html#hotel">ホテル</a>
+      <a href="index.html#articles">旅行記事</a>
+      <a href="index.html#budget">予算から探す</a>
+    </nav>
+
+    <a href="index.html" class="back">
+      ← トップへ戻る
+    </a>
+
+  </div>
+
+</header>
+
+
+<main>
+
+
+<!-- HERO -->
+
+<section class="hero">
+
+  <div class="container hero-inner">
+
+    <div class="hero-copy">
+
+      <div class="eyebrow">
+        EUROPE / UNI TRIP
+      </div>
+
+      <h1>
+        ヨーロッパを、<br>
+        もっと自由に。
+      </h1>
+
+      <p class="lead">
+        街歩き、グルメ、歴史、そして絶景。<br>
+        大学生のヨーロッパ旅行を、学生目線で探そう。
+      </p>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- CITIES -->
+
+<section>
+
+  <div class="container">
+
+    <div class="head">
+
+      <div>
+
+        <div class="kicker">
+          POPULAR CITIES
+        </div>
+
+        <h2>
+          ヨーロッパの人気都市
+        </h2>
+
+        <p class="desc">
+          初めてのヨーロッパ旅行にも人気の3都市。
+        </p>
+
+      </div>
+
+    </div>
+
+
+    <div class="cities">
+
+
+      <!-- PARIS -->
+
+      <article class="city">
+
+        <div
+          class="city-photo"
+          style="
+            background-image:
+            linear-gradient(rgba(23,63,74,.08),rgba(23,63,74,.08)),
+            url('images/paris.jpg');
+          ">
+        </div>
+
+        <div class="city-body">
+
+          <small>PARIS / FRANCE</small>
+
+          <h3>パリ</h3>
+
+          <p>
+            エッフェル塔やルーブル美術館、
+            カフェなどを楽しめるフランスの定番都市。
+          </p>
+
+        </div>
+
+      </article>
+
+
+      <!-- ROME -->
+
+      <article class="city">
+
+        <div
+          class="city-photo"
+          style="
+            background-image:
+            linear-gradient(rgba(23,63,74,.08),rgba(23,63,74,.08)),
+            url('images/rome.jpg');
+          ">
+        </div>
+
+        <div class="city-body">
+
+          <small>ROME / ITALY</small>
+
+          <h3>ローマ</h3>
+
+          <p>
+            コロッセオや歴史的な街並み、
+            イタリアグルメを楽しめる人気都市。
+          </p>
+
+        </div>
+
+      </article>
+
+
+      <!-- LONDON -->
+
+      <article class="city">
+
+        <div
+          class="city-photo"
+          style="
+            background-image:
+            linear-gradient(rgba(23,63,74,.08),rgba(23,63,74,.08)),
+            url('images/london.jpg');
+          ">
+        </div>
+
+        <div class="city-body">
+
+          <small>LONDON / UK</small>
+
+          <h3>ロンドン</h3>
+
+          <p>
+            歴史的な建物から最新カルチャーまで、
+            幅広く楽しめるイギリスの大都市。
+          </p>
+
+        </div>
+
+      </article>
+
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- EUROPE FEATURE -->
+
+<section>
+
+  <div class="container">
+
+    <div class="feature">
+
+      <div class="feature-grid">
+
+        <div class="feature-copy">
+
+          <div class="kicker">
+            GRADUATION TRIP
+          </div>
+
+          <h2>
+            卒業旅行で、<br>
+            ヨーロッパへ。
+          </h2>
+
+          <p>
+            一つの国だけじゃなく、複数の都市を
+            周遊するのもヨーロッパ旅行の楽しみ。
+            自分だけのルートを作ってみよう。
+          </p>
+
+        </div>
+
+
+        <div class="feature-points">
+
+          <div class="feature-point">
+            <strong>✈️ 周遊旅行</strong>
+            <span>複数都市をまとめて楽しむ</span>
+          </div>
+
+          <div class="feature-point">
+            <strong>🏛 街歩き</strong>
+            <span>歴史ある街並みを楽しむ</span>
+          </div>
+
+          <div class="feature-point">
+            <strong>🍝 グルメ</strong>
+            <span>国ごとの料理を食べ歩く</span>
+          </div>
+
+          <div class="feature-point">
+            <strong>📸 絶景</strong>
+            <span>ヨーロッパならではの景色</span>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- BUDGET -->
+
+<section>
+
+  <div class="container">
+
+    <div class="budget">
+
+      <div class="budget-inner">
+
+        <div class="budget-title">
+
+          <div class="kicker">
+            EUROPE BUDGET
+          </div>
+
+          <h2>
+            ヨーロッパ旅行の<br>
+            予算から探す
+          </h2>
+
+          <p>
+            自分の予算に合わせて旅を探そう。
+          </p>
+
+        </div>
+
+
+        <div class="budget-list">
+
+          <a class="budget-card" href="#">
+            〜15万円
+            <span class="arrow">→</span>
+          </a>
+
+          <a class="budget-card" href="#">
+            〜20万円
+            <span class="arrow">→</span>
+          </a>
+
+          <a class="budget-card" href="#">
+            〜30万円
+            <span class="arrow">→</span>
+          </a>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- TIPS -->
+
+<section>
+
+  <div class="container">
+
+    <div class="head">
+
+      <div>
+
+        <div class="kicker">
+          EUROPE TRAVEL TIPS
+        </div>
+
+        <h2>
+          ヨーロッパ旅行のポイント
+        </h2>
+
+        <p class="desc">
+          学生旅行でチェックしておきたいこと。
+        </p>
+
+      </div>
+
+    </div>
+
+
+    <div class="tips">
+
+
+      <article class="tip">
+
+        <div class="tip-num">
+          01 / FLIGHT
+        </div>
+
+        <h3>
+          航空券を安く探す
+        </h3>
+
+        <p>
+          セールや乗り継ぎ便なども含めて、
+          航空券を比較して旅費を抑えよう。
+        </p>
+
+      </article>
+
+
+      <article class="tip">
+
+        <div class="tip-num">
+          02 / ROUTE
+        </div>
+
+        <h3>
+          周遊ルートを考える
+        </h3>
+
+        <p>
+          一度の旅行で複数都市を巡るなら、
+          移動時間と交通費も考えてルートを組もう。
+        </p>
+
+      </article>
+
+
+      <article class="tip">
+
+        <div class="tip-num">
+          03 / HOTEL
+        </div>
+
+        <h3>
+          ホテルを比較する
+        </h3>
+
+        <p>
+          観光地へのアクセスや駅からの距離を
+          比較してホテルを選ぼう。
+        </p>
+
+      </article>
+
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- CTA -->
+
+<section>
+
+  <div class="container">
+
+    <div class="cta">
+
+      <div>
+
+        <h2>
+          次の旅先を探そう。
+        </h2>
+
+        <p>
+          ヨーロッパ以外の人気旅行先もチェック。
+        </p>
+
+      </div>
+
+      <a href="index.html#destinations" class="cta-button">
+        行き先を見る →
+      </a>
+
+    </div>
+
+  </div>
+
+</section>
+
+</main>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+  <div class="container footer">
+
+    <div>
+
+      <div class="footer-logo">
+        UNI TRIP
+      </div>
+
+      <p>
+        大学生の旅を、もっと自由に。
+      </p>
+
+    </div>
+
+    <div>
+
+      <p>
+        Travel smarter. Go further.
+      </p>
+
+      <p>
+        © 2026 UNI TRIP
+      </p>
+
+    </div>
+
+  </div>
+
+</footer>
+
+</body>
+</html>
