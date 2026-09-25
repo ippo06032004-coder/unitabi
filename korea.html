@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>韓国旅行｜UNI trip</title>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f7f7f5;
+      color: #222;
+    }
+
+    header {
+      background: #ffffff;
+      padding: 20px 6%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid #eee;
+    }
+
+    .logo {
+      font-size: 24px;
+      font-weight: bold;
+      text-decoration: none;
+      color: #111;
+    }
+
+    .back {
+      text-decoration: none;
+      color: #555;
+      font-size: 14px;
+    }
+
+    .hero {
+      padding: 70px 6% 50px;
+      text-align: center;
+    }
+
+    .hero h1 {
+      font-size: 42px;
+      margin-bottom: 15px;
+    }
+
+    .hero p {
+      color: #777;
+      font-size: 16px;
+    }
+
+    .content {
+      max-width: 1000px;
+      margin: auto;
+      padding: 20px;
+    }
+
+    .search-box {
+      background: white;
+      border-radius: 20px;
+      padding: 30px;
+      box-shadow: 0 5px 25px rgba(0,0,0,0.05);
+    }
+
+    .search-box h2 {
+      margin-top: 0;
+    }
+
+    .items {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 15px;
+      margin-top: 20px;
+    }
+
+    .item {
+      background: #f5f5f5;
+      padding: 25px;
+      border-radius: 15px;
+      text-align: center;
+    }
+
+    @media (max-width: 700px) {
+      .items {
+        grid-template-columns: 1fr;
+      }
+
+      .hero h1 {
+        font-size: 32px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <a href="index.html" class="logo">UNI trip</a>
+    <a href="index.html" class="back">← トップへ戻る</a>
+  </header>
+
+  <section class="hero">
+    <h1>🇰🇷 韓国旅行</h1>
+    <p>大学生でも楽しめる韓国旅行をチェック！</p>
+  </section>
+
+  <div class="content">
+
+    <div class="search-box">
+      <h2>韓国で人気の行き先</h2>
+
+      <div class="items">
+        <div class="item">
+          <h3>ソウル</h3>
+          <p>ショッピング・グルメ・カフェ</p>
+        </div>
+
+        <div class="item">
+          <h3>釜山</h3>
+          <p>海・グルメ・街歩き</p>
+        </div>
+
+        <div class="item">
+          <h3>済州島</h3>
+          <p>自然・リゾート・絶景</p>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+</body>
+</html>
