@@ -436,4 +436,455 @@ footer p{
   }
 
   .hero-inner{
+    align-items:flex-start;
+    padding-top:70px;
+  }
+
+  .hero-copy{
+    width:100%;
+  }
+
+  .hero h1{
+    font-size:43px;
+  }
+
+  section{
+    padding:52px 0;
+  }
+
+  .head{
+    display:block;
+  }
+
+  h2{
+    font-size:27px;
+  }
+
+  .cities,
+  .tips{
+    grid-template-columns:1fr;
+  }
+
+  .city-photo{
+    height:200px;
+  }
+
+  .budget{
+    padding:20px;
+  }
+
+  .budget-list{
+    grid-template-columns:1fr;
+  }
+
+  .cta{
+    display:block;
+    padding:30px;
+  }
+
+  .cta-button{
+    display:inline-block;
+    margin-top:20px;
+  }
+
+  .footer{
+    display:block;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+
+<header>
+  <div class="container header">
+
+    <a href="index.html" class="logo">
+      UNI<span>TRIP</span>
+    </a>
+
+    <nav>
+      <a href="index.html#destinations">行き先から探す</a>
+      <a href="index.html#flight">航空券</a>
+      <a href="index.html#hotel">ホテル</a>
+      <a href="index.html#articles">旅行記事</a>
+      <a href="index.html#budget">予算から探す</a>
+    </nav>
+
+    <a href="index.html" class="back">
+      ← トップへ戻る
+    </a>
+
+  </div>
+</header>
+
+
+<main>
+
+<!-- HERO -->
+
+<section class="hero">
+
+  <div class="container hero-inner">
+
+    <div class="hero-copy">
+
+      <div class="eyebrow">
+        TAIWAN / UNI TRIP
+      </div>
+
+      <h1>
+        台湾を、<br>
+        もっと自由に。
+      </h1>
+
+      <p class="lead">
+        食べ歩きも、街歩きも。<br>
+        大学生の台湾旅行を、学生目線で探そう。
+      </p>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- CITIES -->
+
+<section>
+
+  <div class="container">
+
+    <div class="head">
+
+      <div>
+
+        <div class="kicker">
+          POPULAR CITIES
+        </div>
+
+        <h2>
+          台湾の人気エリア
+        </h2>
+
+        <p class="desc">
+          初めての台湾旅行にもおすすめの3エリア。
+        </p>
+
+      </div>
+
+    </div>
+
+
+    <div class="cities">
+
+      <!-- TAIPEI -->
+
+      <article class="city">
+
+        <div
+          class="city-photo"
+          style="
+            background-image:
+            linear-gradient(rgba(23,63,74,.08),rgba(23,63,74,.08)),
+            url('images/taipei.jpg');
+          ">
+        </div>
+
+        <div class="city-body">
+
+          <small>TAIPEI</small>
+
+          <h3>台北</h3>
+
+          <p>
+            夜市・グルメ・ショッピング・
+            カフェなど台湾旅行の定番を楽しめる街。
+          </p>
+
+        </div>
+
+      </article>
+
+
+      <!-- KAOHSIUNG -->
+
+      <article class="city">
+
+        <div
+          class="city-photo"
+          style="
+            background-image:
+            linear-gradient(rgba(23,63,74,.08),rgba(23,63,74,.08)),
+            url('images/kaohsiung.jpg');
+          ">
+        </div>
+
+        <div class="city-body">
+
+          <small>KAOHSIUNG</small>
+
+          <h3>高雄</h3>
+
+          <p>
+            港町ならではの景色とグルメを楽しめる、
+            台湾南部の人気都市。
+          </p>
+
+        </div>
+
+      </article>
+
+
+      <!-- TAINAN -->
+
+      <article class="city">
+
+        <div
+          class="city-photo"
+          style="
+            background-image:
+            linear-gradient(rgba(23,63,74,.08),rgba(23,63,74,.08)),
+            url('images/tainan.jpg');
+          ">
+        </div>
+
+        <div class="city-body">
+
+          <small>TAINAN</small>
+
+          <h3>台南</h3>
+
+          <p>
+            台湾グルメや歴史ある街並みを
+            ゆっくり楽しみたい人におすすめ。
+          </p>
+
+        </div>
+
+      </article>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- BUDGET -->
+
+<section>
+
+  <div class="container">
+
+    <div class="budget">
+
+      <div class="budget-inner">
+
+        <div class="budget-title">
+
+          <div class="kicker">
+            TAIWAN BUDGET
+          </div>
+
+          <h2>
+            台湾旅行の予算から探す
+          </h2>
+
+          <p>
+            自分の予算に合わせて旅を探そう。
+          </p>
+
+        </div>
+
+
+        <div class="budget-list">
+
+          <a class="budget-card" href="#">
+            〜3万円
+            <span class="arrow">→</span>
+          </a>
+
+          <a class="budget-card" href="#">
+            〜5万円
+            <span class="arrow">→</span>
+          </a>
+
+          <a class="budget-card" href="#">
+            〜7万円
+            <span class="arrow">→</span>
+          </a>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- TRAVEL TIPS -->
+
+<section>
+
+  <div class="container">
+
+    <div class="head">
+
+      <div>
+
+        <div class="kicker">
+          TAIWAN TRAVEL TIPS
+        </div>
+
+        <h2>
+          台湾旅行のポイント
+        </h2>
+
+        <p class="desc">
+          学生旅行でチェックしておきたいこと。
+        </p>
+
+      </div>
+
+    </div>
+
+
+    <div class="tips">
+
+      <article class="tip">
+
+        <div class="tip-num">
+          01 / FLIGHT
+        </div>
+
+        <h3>
+          航空券を安く探す
+        </h3>
+
+        <p>
+          LCCやセール情報をチェックして、
+          できるだけ旅費を抑えよう。
+        </p>
+
+      </article>
+
+
+      <article class="tip">
+
+        <div class="tip-num">
+          02 / FOOD
+        </div>
+
+        <h3>
+          台湾グルメを楽しむ
+        </h3>
+
+        <p>
+          夜市やローカルグルメなど、
+          台湾ならではの食を楽しもう。
+        </p>
+
+      </article>
+
+
+      <article class="tip">
+
+        <div class="tip-num">
+          03 / HOTEL
+        </div>
+
+        <h3>
+          立地でホテルを選ぶ
+        </h3>
+
+        <p>
+          MRTの駅から近いホテルを選ぶと、
+          観光地への移動がしやすく便利。
+        </p>
+
+      </article>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- CTA -->
+
+<section>
+
+  <div class="container">
+
+    <div class="cta">
+
+      <div>
+
+        <h2>
+          次の旅先を探そう。
+        </h2>
+
+        <p>
+          台湾以外の人気旅行先もチェック。
+        </p>
+
+      </div>
+
+      <a href="index.html#destinations" class="cta-button">
+        行き先を見る →
+      </a>
+
+    </div>
+
+  </div>
+
+</section>
+
+</main>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+  <div class="container footer">
+
+    <div>
+
+      <div class="footer-logo">
+        UNI TRIP
+      </div>
+
+      <p>
+        大学生の旅を、もっと自由に。
+      </p>
+
+    </div>
+
+    <div>
+
+      <p>
+        Travel smarter. Go further.
+      </p>
+
+      <p>
+        © 2026 UNI TRIP
+      </p>
+
+    </div>
+
+  </div>
+
+</footer>
+
+</body>
+</html>
 ```
