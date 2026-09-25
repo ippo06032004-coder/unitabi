@@ -1,12 +1,20 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
+
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0">
+
+<meta name="description"
+      content="UNI TRIP｜大学生向け海外旅行おすすめプラン">
 
 <title>おすすめ旅行プラン｜UNI TRIP</title>
 
+
 <style>
+
 :root{
   --blue:#2E7C8F;
   --dark:#173F4A;
@@ -31,8 +39,10 @@ body{
     "Hiragino Kaku Gothic ProN",
     "Yu Gothic",
     sans-serif;
+
   background:var(--cream);
   color:var(--ink);
+  line-height:1.6;
 }
 
 a{
@@ -40,10 +50,6 @@ a{
   color:inherit;
 }
 
-.container{
-  width:min(1100px,calc(100% - 32px));
-  margin:auto;
-}
 
 /* HEADER */
 
@@ -54,7 +60,10 @@ header{
 }
 
 .header{
+  width:min(1180px,calc(100% - 32px));
   height:100%;
+  margin:auto;
+
   display:flex;
   align-items:center;
 }
@@ -70,79 +79,102 @@ header{
   color:var(--blue);
 }
 
-/* MAIN */
+.back{
+  margin-left:auto;
+  font-size:13px;
+  font-weight:700;
+  color:var(--blue);
+}
 
-main{
-  padding:55px 0 80px;
+
+/* HERO */
+
+.hero{
+  background:var(--dark);
+  color:white;
+  padding:70px 20px 80px;
+}
+
+.hero-inner{
+  width:min(1000px,100%);
+  margin:auto;
 }
 
 .kicker{
   font-size:11px;
   font-weight:900;
-  letter-spacing:.17em;
-  color:var(--blue);
-  margin-bottom:7px;
+  letter-spacing:.18em;
+  color:#9dd2dc;
+  margin-bottom:10px;
 }
 
-h1{
-  font-size:38px;
+.hero h1{
+  font-size:clamp(32px,5vw,52px);
+  line-height:1.15;
   letter-spacing:-.04em;
 }
 
-.description{
-  color:var(--muted);
-  font-size:13px;
-  margin-top:7px;
+.hero p{
+  margin-top:12px;
+  color:rgba(255,255,255,.75);
 }
 
-/* SEARCH SUMMARY */
 
-.search-summary{
-  margin-top:30px;
+/* CONDITIONS */
+
+.conditions{
+  width:min(1000px,calc(100% - 32px));
+  margin:-35px auto 0;
+
   background:white;
-  border:1px solid var(--line);
   border-radius:18px;
-  padding:18px 22px;
+  box-shadow:0 15px 40px rgba(0,0,0,.12);
+
+  padding:20px;
+
   display:flex;
-  align-items:center;
-  gap:15px;
   flex-wrap:wrap;
+  gap:10px;
 }
 
 .condition{
   background:var(--light);
   color:var(--dark);
-  padding:8px 13px;
+
   border-radius:999px;
+
+  padding:9px 15px;
+
   font-size:12px;
   font-weight:800;
 }
 
-.change{
-  margin-left:auto;
-  color:var(--blue);
-  font-size:12px;
-  font-weight:800;
+
+/* RESULTS */
+
+.results{
+  width:min(1000px,calc(100% - 32px));
+  margin:55px auto 80px;
 }
 
-/* RESULT */
-
-.result-title{
-  margin-top:45px;
-  margin-bottom:18px;
+.result-head{
   display:flex;
-  justify-content:space-between;
   align-items:end;
+  justify-content:space-between;
+
+  margin-bottom:25px;
 }
 
-.result-title h2{
-  font-size:25px;
+.result-head h2{
+  font-size:28px;
+  letter-spacing:-.03em;
 }
 
 .result-count{
-  font-size:11px;
+  font-size:12px;
   color:var(--muted);
 }
+
 
 /* CARDS */
 
@@ -155,135 +187,190 @@ h1{
   background:white;
   border:1px solid var(--line);
   border-radius:20px;
+
   overflow:hidden;
+
   display:grid;
-  grid-template-columns:230px 1fr;
+  grid-template-columns:260px 1fr;
+
   transition:.2s;
 }
 
 .plan:hover{
-  transform:translateY(-2px);
-  box-shadow:0 10px 30px rgba(0,0,0,.08);
+  transform:translateY(-3px);
+  box-shadow:0 12px 30px rgba(0,0,0,.08);
 }
 
 .plan-image{
-  min-height:230px;
-  background-size:cover;
+  min-height:250px;
+
   background-position:center;
+  background-size:cover;
 }
 
-.taiwan{
-  background-image:
-    linear-gradient(
-      180deg,
-      rgba(0,0,0,.05),
-      rgba(0,0,0,.2)
-    ),
-    url("images/taiwan.jpg");
-}
-
-.korea{
-  background-image:
-    linear-gradient(
-      180deg,
-      rgba(0,0,0,.05),
-      rgba(0,0,0,.2)
-    ),
-    url("images/korea.jpg");
-}
-
-.thailand{
-  background-image:
-    linear-gradient(
-      180deg,
-      rgba(0,0,0,.05),
-      rgba(0,0,0,.2)
-    ),
-    url("images/thailand.jpg");
-}
-
-.plan-content{
-  padding:24px;
+.plan-body{
+  padding:25px;
 }
 
 .plan-top{
   display:flex;
-  justify-content:space-between;
-  align-items:start;
+  align-items:center;
+  gap:8px;
 }
 
 .country{
-  font-size:11px;
   color:var(--blue);
+  font-size:10px;
   font-weight:900;
-  letter-spacing:.1em;
+  letter-spacing:.15em;
+}
+
+.badge{
+  background:var(--blue);
+  color:white;
+
+  border-radius:999px;
+
+  padding:3px 8px;
+
+  font-size:9px;
+  font-weight:900;
 }
 
 .plan h3{
-  font-size:27px;
-  margin-top:2px;
+  font-size:25px;
+  margin-top:7px;
 }
 
-.recommend{
-  background:#FFF3D9;
-  color:#9A6A00;
-  padding:5px 9px;
-  border-radius:999px;
-  font-size:10px;
-  font-weight:900;
+.description{
+  color:var(--muted);
+  font-size:13px;
+  margin-top:8px;
 }
 
 .price{
-  margin-top:17px;
-  font-size:13px;
-  color:var(--muted);
+  font-size:26px;
+  font-weight:900;
+  color:var(--dark);
+
+  margin-top:18px;
 }
 
-.price strong{
-  color:var(--ink);
-  font-size:25px;
+.price small{
+  font-size:11px;
+  font-weight:600;
+  color:var(--muted);
 }
 
 .details{
   display:flex;
-  gap:25px;
-  margin-top:15px;
-  padding-top:15px;
-  border-top:1px solid var(--line);
+  flex-wrap:wrap;
+  gap:8px;
+
+  margin-top:12px;
 }
 
 .detail{
+  background:#f5f7f7;
+
+  border-radius:8px;
+
+  padding:6px 10px;
+
+  font-size:11px;
+  font-weight:700;
+}
+
+.breakdown{
+  display:flex;
+  gap:25px;
+
+  margin-top:17px;
+
   font-size:11px;
   color:var(--muted);
 }
 
-.detail strong{
+.breakdown strong{
   display:block;
   color:var(--ink);
   font-size:13px;
-  margin-top:2px;
-}
-
-.plan-description{
-  font-size:12px;
-  color:var(--muted);
-  margin-top:14px;
 }
 
 .plan-button{
   display:inline-block;
-  margin-top:18px;
-  padding:10px 18px;
+
+  margin-top:20px;
+
   background:var(--blue);
   color:white;
+
   border-radius:10px;
+
+  padding:10px 20px;
+
   font-size:12px;
-  font-weight:900;
+  font-weight:800;
 }
 
 .plan-button:hover{
   background:var(--dark);
 }
+
+
+/* NOTICE */
+
+.notice{
+  margin-top:25px;
+
+  background:var(--light);
+  border-radius:14px;
+
+  padding:15px 18px;
+
+  font-size:11px;
+  color:var(--muted);
+}
+
+
+/* NO RESULT */
+
+.no-result{
+  background:white;
+  border:1px solid var(--line);
+  border-radius:18px;
+
+  padding:45px 25px;
+
+  text-align:center;
+}
+
+.no-result h3{
+  font-size:22px;
+}
+
+.no-result p{
+  margin-top:8px;
+  color:var(--muted);
+  font-size:13px;
+}
+
+.back-button{
+  display:inline-block;
+
+  margin-top:20px;
+
+  background:var(--blue);
+  color:white;
+
+  padding:11px 22px;
+
+  border-radius:10px;
+
+  font-size:12px;
+  font-weight:800;
+}
+
 
 /* FOOTER */
 
@@ -293,349 +380,193 @@ footer{
   padding:35px 0;
 }
 
-footer p{
-  font-size:11px;
-  color:rgba(255,255,255,.6);
-  margin-top:5px;
+.footer{
+  width:min(1000px,calc(100% - 32px));
+  margin:auto;
 }
+
+.footer-logo{
+  font-size:20px;
+  font-weight:900;
+}
+
+.footer p{
+  color:rgba(255,255,255,.6);
+  font-size:11px;
+  margin-top:4px;
+}
+
 
 /* MOBILE */
 
-@media(max-width:650px){
+@media(max-width:700px){
 
-  .container{
-    width:calc(100% - 24px);
+  header{
+    height:62px;
   }
 
-  main{
-    padding:40px 0 60px;
+  .hero{
+    padding:50px 16px 65px;
   }
 
-  h1{
-    font-size:30px;
+  .hero h1{
+    font-size:36px;
   }
 
-  .search-summary{
-    padding:15px;
+  .conditions{
+    margin-top:-25px;
   }
 
-  .change{
-    width:100%;
-    margin-left:0;
+  .result-head{
+    display:block;
+  }
+
+  .result-count{
+    margin-top:5px;
   }
 
   .plan{
-    grid-template-columns:1fr;
+    display:block;
   }
 
   .plan-image{
     min-height:190px;
   }
 
-  .plan-content{
-    padding:19px;
+  .plan-body{
+    padding:20px;
   }
 
   .plan h3{
-    font-size:24px;
+    font-size:23px;
   }
 
-  .details{
-    gap:15px;
+  .breakdown{
+    gap:18px;
   }
+
 }
+
 </style>
+
 </head>
 
 
 <body>
 
+
 <header>
-  <div class="container header">
+
+  <div class="header">
+
     <a href="index.html" class="logo">
       UNI<span>TRIP</span>
     </a>
-  </div>
-</header>
 
-
-<main>
-
-<div class="container">
-
-  <div class="kicker">
-    RECOMMENDED TRIPS
-  </div>
-
-  <h1>
-    あなたにおすすめの旅
-  </h1>
-
-  <p class="description">
-    大学生に人気の行き先から、条件に合う旅をピックアップしました。
-  </p>
-
-
-  <!-- SEARCH CONDITIONS -->
-
-  <div class="search-summary">
-
-    <span class="condition">
-      ✈️ 東京発
-    </span>
-
-    <span class="condition">
-      📅 3〜5日
-    </span>
-
-    <span class="condition">
-      💰 5万円以内
-    </span>
-
-    <span class="condition">
-      👥 2人
-    </span>
-
-    <a href="index.html" class="change">
-      条件を変更 →
+    <a href="index.html" class="back">
+      ← トップへ戻る
     </a>
 
   </div>
 
+</header>
 
-  <!-- RESULT TITLE -->
 
-  <div class="result-title">
 
-    <h2>
-      おすすめプラン
-    </h2>
+<section class="hero">
 
-    <span class="result-count">
-      3件のプラン
-    </span>
+  <div class="hero-inner">
+
+    <div class="kicker">
+      UNI TRIP SEARCH
+    </div>
+
+    <h1>
+      あなたにおすすめの旅
+    </h1>
+
+    <p>
+      選んだ条件から、学生向けの旅行プランを探しました。
+    </p>
 
   </div>
 
+</section>
 
-  <!-- PLANS -->
 
-  <div class="plans">
 
+<div class="conditions" id="conditions">
 
-    <!-- TAIWAN -->
+  <div class="condition" id="conditionDestination">
+    🌏 おまかせ
+  </div>
 
-    <article class="plan">
+  <div class="condition" id="conditionDays">
+    📅 日数おまかせ
+  </div>
 
-      <div class="plan-image taiwan"></div>
+  <div class="condition" id="conditionPeople">
+    👥 2人
+  </div>
 
-      <div class="plan-content">
-
-        <div class="plan-top">
-
-          <div>
-            <div class="country">
-              TAIWAN
-            </div>
-
-            <h3>
-              台北
-            </h3>
-          </div>
-
-          <span class="recommend">
-            おすすめ
-          </span>
-
-        </div>
-
-
-        <div class="price">
-          予算目安
-          <br>
-          <strong>¥38,000〜</strong>
-        </div>
-
-
-        <div class="details">
-
-          <div class="detail">
-            日数
-            <strong>3泊4日</strong>
-          </div>
-
-          <div class="detail">
-            航空券
-            <strong>¥22,000〜</strong>
-          </div>
-
-          <div class="detail">
-            ホテル
-            <strong>¥12,000〜</strong>
-          </div>
-
-        </div>
-
-
-        <p class="plan-description">
-          食べ歩き・夜市・街歩きを楽しみたい大学生におすすめ。
-        </p>
-
-        <a href="taiwan.html" class="plan-button">
-          この旅を見る →
-        </a>
-
-      </div>
-
-    </article>
-
-
-    <!-- KOREA -->
-
-    <article class="plan">
-
-      <div class="plan-image korea"></div>
-
-      <div class="plan-content">
-
-        <div class="plan-top">
-
-          <div>
-            <div class="country">
-              KOREA
-            </div>
-
-            <h3>
-              ソウル
-            </h3>
-          </div>
-
-          <span class="recommend">
-            人気
-          </span>
-
-        </div>
-
-
-        <div class="price">
-          予算目安
-          <br>
-          <strong>¥42,000〜</strong>
-        </div>
-
-
-        <div class="details">
-
-          <div class="detail">
-            日数
-            <strong>3泊4日</strong>
-          </div>
-
-          <div class="detail">
-            航空券
-            <strong>¥25,000〜</strong>
-          </div>
-
-          <div class="detail">
-            ホテル
-            <strong>¥13,000〜</strong>
-          </div>
-
-        </div>
-
-
-        <p class="plan-description">
-          韓国グルメ・ショッピング・カフェ巡りを楽しむ定番プラン。
-        </p>
-
-        <a href="korea.html" class="plan-button">
-          この旅を見る →
-        </a>
-
-      </div>
-
-    </article>
-
-
-    <!-- THAILAND -->
-
-    <article class="plan">
-
-      <div class="plan-image thailand"></div>
-
-      <div class="plan-content">
-
-        <div class="plan-top">
-
-          <div>
-            <div class="country">
-              THAILAND
-            </div>
-
-            <h3>
-              バンコク
-            </h3>
-          </div>
-
-          <span class="recommend">
-            コスパ
-          </span>
-
-        </div>
-
-
-        <div class="price">
-          予算目安
-          <br>
-          <strong>¥49,000〜</strong>
-        </div>
-
-
-        <div class="details">
-
-          <div class="detail">
-            日数
-            <strong>4泊5日</strong>
-          </div>
-
-          <div class="detail">
-            航空券
-            <strong>¥30,000〜</strong>
-          </div>
-
-          <div class="detail">
-            ホテル
-            <strong>¥14,000〜</strong>
-          </div>
-
-        </div>
-
-
-        <p class="plan-description">
-          グルメ・観光・ナイトマーケットまで楽しめる人気都市。
-        </p>
-
-        <a href="thailand.html" class="plan-button">
-          この旅を見る →
-        </a>
-
-      </div>
-
-    </article>
-
-
+  <div class="condition" id="conditionBudget">
+    💰 〜5万円
   </div>
 
 </div>
 
+
+
+<main class="results">
+
+  <div class="result-head">
+
+    <div>
+
+      <div class="kicker">
+        RECOMMENDED PLANS
+      </div>
+
+      <h2>
+        おすすめプラン
+      </h2>
+
+    </div>
+
+    <div
+      class="result-count"
+      id="resultCount">
+      0件のプラン
+    </div>
+
+  </div>
+
+
+  <div
+    class="plans"
+    id="plans">
+  </div>
+
+
+  <div class="notice">
+
+    ※表示価格はUNI TRIPのモデルプランによる参考価格です。
+    航空券・ホテル料金は時期や予約状況によって変動します。
+    実際の予約時には各予約サイトで最新価格をご確認ください。
+
+  </div>
+
 </main>
+
 
 
 <footer>
 
-  <div class="container">
+  <div class="footer">
 
-    <strong>UNI TRIP</strong>
+    <div class="footer-logo">
+      UNI TRIP
+    </div>
 
     <p>
       大学生の旅を、もっと自由に。
@@ -644,6 +575,562 @@ footer p{
   </div>
 
 </footer>
+
+
+
+<script>
+
+
+/* ==========================
+   TRAVEL PLAN DATA
+========================== */
+
+
+const plans = [
+
+
+  {
+    destination:"taiwan",
+    country:"TAIWAN",
+    city:"台北",
+    days:4,
+    budget:38000,
+    flight:22000,
+    hotel:12000,
+    image:"images/taiwan.jpg",
+    link:"taiwan.html",
+    description:"夜市・グルメ・街歩きを楽しむ、初めての海外旅行にもおすすめの台北。",
+    tags:["グルメ","街歩き","初心者向け"]
+  },
+
+
+  {
+    destination:"taiwan",
+    country:"TAIWAN",
+    city:"台南",
+    days:4,
+    budget:41000,
+    flight:23000,
+    hotel:13000,
+    image:"images/taiwan.jpg",
+    link:"taiwan.html",
+    description:"ローカルグルメや古い街並みを楽しめる、ゆったり台湾旅。",
+    tags:["グルメ","ローカル","ゆったり"]
+  },
+
+
+  {
+    destination:"korea",
+    country:"KOREA",
+    city:"ソウル",
+    days:4,
+    budget:42000,
+    flight:25000,
+    hotel:13000,
+    image:"images/korea.jpg",
+    link:"korea.html",
+    description:"カフェ・ショッピング・韓国グルメをまとめて楽しむ定番ソウル旅。",
+    tags:["カフェ","買い物","グルメ"]
+  },
+
+
+  {
+    destination:"korea",
+    country:"KOREA",
+    city:"釜山",
+    days:4,
+    budget:39000,
+    flight:23000,
+    hotel:12000,
+    image:"images/korea.jpg",
+    link:"korea.html",
+    description:"海沿いの街を歩きながら韓国グルメを楽しむコスパ旅。",
+    tags:["海","グルメ","コスパ"]
+  },
+
+
+  {
+    destination:"thailand",
+    country:"THAILAND",
+    city:"バンコク",
+    days:5,
+    budget:49000,
+    flight:30000,
+    hotel:14000,
+    image:"images/thailand.jpg",
+    link:"thailand.html",
+    description:"タイ料理・ナイトマーケット・寺院巡りを楽しむ王道バンコク旅。",
+    tags:["グルメ","街歩き","ナイトマーケット"]
+  },
+
+
+  {
+    destination:"thailand",
+    country:"THAILAND",
+    city:"チェンマイ",
+    days:5,
+    budget:52000,
+    flight:32000,
+    hotel:14000,
+    image:"images/thailand.jpg",
+    link:"thailand.html",
+    description:"カフェや寺院を巡りながら、のんびり過ごすタイ北部の旅。",
+    tags:["カフェ","寺院","ゆったり"]
+  },
+
+
+  {
+    destination:"philippines",
+    country:"PHILIPPINES",
+    city:"セブ",
+    days:5,
+    budget:55000,
+    flight:33000,
+    hotel:16000,
+    image:"images/philippines.jpg",
+    link:"philippines.html",
+    description:"海・リゾート・アクティビティを楽しむ学生向けセブ旅行。",
+    tags:["海","リゾート","アクティビティ"]
+  },
+
+
+  {
+    destination:"philippines",
+    country:"PHILIPPINES",
+    city:"マニラ",
+    days:5,
+    budget:50000,
+    flight:31000,
+    hotel:14000,
+    image:"images/philippines.jpg",
+    link:"philippines.html",
+    description:"フィリピンの街歩きやグルメを楽しむリーズナブルな旅。",
+    tags:["街歩き","グルメ","コスパ"]
+  },
+
+
+  {
+    destination:"europe",
+    country:"EUROPE",
+    city:"パリ",
+    days:7,
+    budget:98000,
+    flight:72000,
+    hotel:22000,
+    image:"images/europe.jpg",
+    link:"europe.html",
+    description:"王道のヨーロッパ旅行。街並みや美術館を楽しむ卒業旅行にも。",
+    tags:["街歩き","美術館","卒業旅行"]
+  },
+
+
+  {
+    destination:"europe",
+    country:"EUROPE",
+    city:"ローマ",
+    days:7,
+    budget:95000,
+    flight:70000,
+    hotel:21000,
+    image:"images/europe.jpg",
+    link:"europe.html",
+    description:"歴史的な街並みとイタリアグルメを楽しむヨーロッパ旅。",
+    tags:["歴史","グルメ","卒業旅行"]
+  },
+
+
+  {
+    destination:"europe",
+    country:"EUROPE",
+    city:"ロンドン",
+    days:7,
+    budget:100000,
+    flight:75000,
+    hotel:22000,
+    image:"images/europe.jpg",
+    link:"europe.html",
+    description:"カフェ・観光・ショッピングを楽しむ定番ロンドン旅行。",
+    tags:["カフェ","買い物","街歩き"]
+  }
+
+];
+
+
+
+/* ==========================
+   GET SEARCH CONDITIONS
+========================== */
+
+
+const params =
+  new URLSearchParams(window.location.search);
+
+
+const destination =
+  params.get("destination") || "all";
+
+
+const days =
+  params.get("days") || "all";
+
+
+const people =
+  params.get("people") || "2";
+
+
+const budget =
+  Number(params.get("budget")) || 50000;
+
+
+
+/* ==========================
+   DISPLAY CONDITIONS
+========================== */
+
+
+const destinationNames = {
+
+  all:"おまかせ",
+
+  korea:"韓国",
+
+  thailand:"タイ",
+
+  taiwan:"台湾",
+
+  philippines:"フィリピン",
+
+  europe:"ヨーロッパ"
+
+};
+
+
+const daysNames = {
+
+  all:"日数おまかせ",
+
+  short:"2〜3日",
+
+  medium:"3〜5日",
+
+  long:"5〜7日",
+
+  week:"1週間以上"
+
+};
+
+
+document.getElementById(
+  "conditionDestination"
+).textContent =
+  "🌏 " + destinationNames[destination];
+
+
+document.getElementById(
+  "conditionDays"
+).textContent =
+  "📅 " + daysNames[days];
+
+
+document.getElementById(
+  "conditionPeople"
+).textContent =
+  "👥 " + people + "人";
+
+
+document.getElementById(
+  "conditionBudget"
+).textContent =
+  "💰 〜" + (budget / 10000) + "万円";
+
+
+
+/* ==========================
+   SCORE PLANS
+========================== */
+
+
+function getScore(plan){
+
+  let score = 0;
+
+
+  /* 行き先 */
+
+  if(destination === "all"){
+
+    score += 5;
+
+  }else if(plan.destination === destination){
+
+    score += 20;
+
+  }
+
+
+  /* 予算 */
+
+  if(plan.budget <= budget){
+
+    score += 15;
+
+  }else{
+
+    score -= Math.min(
+      10,
+      Math.floor(
+        (plan.budget - budget) / 10000
+      )
+    );
+
+  }
+
+
+  /* 日数 */
+
+  if(days === "all"){
+
+    score += 5;
+
+  }
+
+
+  if(days === "short" && plan.days <= 3){
+
+    score += 10;
+
+  }
+
+
+  if(days === "medium" &&
+     plan.days >= 3 &&
+     plan.days <= 5){
+
+    score += 10;
+
+  }
+
+
+  if(days === "long" &&
+     plan.days >= 5 &&
+     plan.days <= 7){
+
+    score += 10;
+
+  }
+
+
+  if(days === "week" &&
+     plan.days >= 7){
+
+    score += 10;
+
+  }
+
+
+  return score;
+
+}
+
+
+
+/* ==========================
+   SORT
+========================== */
+
+
+const sortedPlans =
+  plans
+  .map(plan => ({
+    ...plan,
+    score:getScore(plan)
+  }))
+  .sort((a,b) => {
+
+    if(b.score !== a.score){
+
+      return b.score - a.score;
+
+    }
+
+    return a.budget - b.budget;
+
+  });
+
+
+
+/* ==========================
+   SHOW RESULTS
+========================== */
+
+
+const results =
+  sortedPlans.slice(0,6);
+
+
+document.getElementById(
+  "resultCount"
+).textContent =
+  results.length + "件のプラン";
+
+
+
+const plansContainer =
+  document.getElementById("plans");
+
+
+
+if(results.length === 0){
+
+  plansContainer.innerHTML = `
+
+    <div class="no-result">
+
+      <h3>
+        条件に合うプランが見つかりませんでした
+      </h3>
+
+      <p>
+        条件を少しゆるめて、もう一度検索してみてください。
+      </p>
+
+      <a
+        href="index.html"
+        class="back-button">
+
+        条件を変更する
+
+      </a>
+
+    </div>
+
+  `;
+
+}else{
+
+
+  results.forEach((plan,index) => {
+
+
+    const badge =
+      index === 0
+      ? `<span class="badge">おすすめ</span>`
+      : "";
+
+
+    const tags =
+      plan.tags
+      .map(tag =>
+        `<span class="detail">${tag}</span>`
+      )
+      .join("");
+
+
+    plansContainer.innerHTML += `
+
+      <article class="plan">
+
+
+        <div
+          class="plan-image"
+          style="
+            background-image:
+            url('${plan.image}');
+          ">
+        </div>
+
+
+        <div class="plan-body">
+
+
+          <div class="plan-top">
+
+            <span class="country">
+              ${plan.country}
+            </span>
+
+            ${badge}
+
+          </div>
+
+
+          <h3>
+            ${plan.city}
+          </h3>
+
+
+          <p class="description">
+            ${plan.description}
+          </p>
+
+
+          <div class="price">
+
+            ¥${plan.budget.toLocaleString()}
+            <small>〜 / 1人</small>
+
+          </div>
+
+
+          <div class="details">
+
+            <span class="detail">
+              📅 ${plan.days}泊${plan.days + 1}日
+            </span>
+
+            ${tags}
+
+          </div>
+
+
+          <div class="breakdown">
+
+            <div>
+
+              航空券
+
+              <strong>
+                ¥${plan.flight.toLocaleString()}〜
+              </strong>
+
+            </div>
+
+
+            <div>
+
+              ホテル
+
+              <strong>
+                ¥${plan.hotel.toLocaleString()}〜
+              </strong>
+
+            </div>
+
+          </div>
+
+
+          <a
+            href="${plan.link}"
+            class="plan-button">
+
+            この旅を詳しく見る →
+
+          </a>
+
+
+        </div>
+
+      </article>
+
+    `;
+
+  });
+
+}
+
+
+</script>
+
 
 </body>
 </html>
