@@ -4,14 +4,11 @@
 
 <meta charset="UTF-8">
 
-<meta name="viewport"
-      content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<meta name="description"
-      content="UNI TRIP｜大学生向け海外旅行おすすめプラン">
+<meta name="description" content="UNI TRIP｜大学生向け海外旅行おすすめプラン">
 
 <title>おすすめ旅行プラン｜UNI TRIP</title>
-
 
 <style>
 
@@ -33,12 +30,12 @@
 
 body{
   font-family:
-    -apple-system,
-    BlinkMacSystemFont,
-    "Helvetica Neue",
-    "Hiragino Kaku Gothic ProN",
-    "Yu Gothic",
-    sans-serif;
+  -apple-system,
+  BlinkMacSystemFont,
+  "Helvetica Neue",
+  "Hiragino Kaku Gothic ProN",
+  "Yu Gothic",
+  sans-serif;
 
   background:var(--cream);
   color:var(--ink);
@@ -128,6 +125,7 @@ header{
 
   background:white;
   border-radius:18px;
+
   box-shadow:0 15px 40px rgba(0,0,0,.12);
 
   padding:20px;
@@ -176,7 +174,7 @@ header{
 }
 
 
-/* CARDS */
+/* PLANS */
 
 .plans{
   display:grid;
@@ -185,7 +183,9 @@ header{
 
 .plan{
   background:white;
+
   border:1px solid var(--line);
+
   border-radius:20px;
 
   overflow:hidden;
@@ -198,6 +198,7 @@ header{
 
 .plan:hover{
   transform:translateY(-3px);
+
   box-shadow:0 12px 30px rgba(0,0,0,.08);
 }
 
@@ -220,8 +221,10 @@ header{
 
 .country{
   color:var(--blue);
+
   font-size:10px;
   font-weight:900;
+
   letter-spacing:.15em;
 }
 
@@ -244,13 +247,17 @@ header{
 
 .description{
   color:var(--muted);
+
   font-size:13px;
+
   margin-top:8px;
 }
 
 .price{
   font-size:26px;
+
   font-weight:900;
+
   color:var(--dark);
 
   margin-top:18px;
@@ -258,13 +265,16 @@ header{
 
 .price small{
   font-size:11px;
+
   font-weight:600;
+
   color:var(--muted);
 }
 
 .details{
   display:flex;
   flex-wrap:wrap;
+
   gap:8px;
 
   margin-top:12px;
@@ -278,22 +288,27 @@ header{
   padding:6px 10px;
 
   font-size:11px;
+
   font-weight:700;
 }
 
 .breakdown{
   display:flex;
+
   gap:25px;
 
   margin-top:17px;
 
   font-size:11px;
+
   color:var(--muted);
 }
 
 .breakdown strong{
   display:block;
+
   color:var(--ink);
+
   font-size:13px;
 }
 
@@ -303,6 +318,7 @@ header{
   margin-top:20px;
 
   background:var(--blue);
+
   color:white;
 
   border-radius:10px;
@@ -310,6 +326,7 @@ header{
   padding:10px 20px;
 
   font-size:12px;
+
   font-weight:800;
 }
 
@@ -324,76 +341,14 @@ header{
   margin-top:25px;
 
   background:var(--light);
+
   border-radius:14px;
 
   padding:15px 18px;
 
   font-size:11px;
+
   color:var(--muted);
-}
-
-
-/* NO RESULT */
-
-.no-result{
-  background:white;
-  border:1px solid var(--line);
-  border-radius:18px;
-
-  padding:45px 25px;
-
-  text-align:center;
-}
-
-.no-result h3{
-  font-size:22px;
-}
-
-.no-result p{
-  margin-top:8px;
-  color:var(--muted);
-  font-size:13px;
-}
-
-.back-button{
-  display:inline-block;
-
-  margin-top:20px;
-
-  background:var(--blue);
-  color:white;
-
-  padding:11px 22px;
-
-  border-radius:10px;
-
-  font-size:12px;
-  font-weight:800;
-}
-
-
-/* FOOTER */
-
-footer{
-  background:var(--dark);
-  color:white;
-  padding:35px 0;
-}
-
-.footer{
-  width:min(1000px,calc(100% - 32px));
-  margin:auto;
-}
-
-.footer-logo{
-  font-size:20px;
-  font-weight:900;
-}
-
-.footer p{
-  color:rgba(255,255,255,.6);
-  font-size:11px;
-  margin-top:4px;
 }
 
 
@@ -439,10 +394,6 @@ footer{
 
   .plan h3{
     font-size:23px;
-  }
-
-  .breakdown{
-    gap:18px;
   }
 
 }
@@ -495,7 +446,7 @@ footer{
 
 
 
-<div class="conditions" id="conditions">
+<div class="conditions">
 
   <div class="condition" id="conditionDestination">
     🌏 おまかせ
@@ -519,6 +470,7 @@ footer{
 
 <main class="results">
 
+
   <div class="result-head">
 
     <div>
@@ -536,7 +488,9 @@ footer{
     <div
       class="result-count"
       id="resultCount">
+
       0件のプラン
+
     </div>
 
   </div>
@@ -556,34 +510,17 @@ footer{
 
   </div>
 
+
 </main>
-
-
-
-<footer>
-
-  <div class="footer">
-
-    <div class="footer-logo">
-      UNI TRIP
-    </div>
-
-    <p>
-      大学生の旅を、もっと自由に。
-    </p>
-
-  </div>
-
-</footer>
 
 
 
 <script>
 
 
-/* ==========================
-   TRAVEL PLAN DATA
-========================== */
+/* =========================
+   TRAVEL DATA
+========================= */
 
 
 const plans = [
@@ -751,19 +688,83 @@ const plans = [
     link:"europe.html",
     description:"カフェ・観光・ショッピングを楽しむ定番ロンドン旅行。",
     tags:["カフェ","買い物","街歩き"]
+  },
+
+
+  /* ここから高予算 */
+
+  {
+    destination:"europe",
+    country:"EUROPE",
+    city:"パリ＋ロンドン",
+    days:10,
+    budget:145000,
+    flight:80000,
+    hotel:45000,
+    image:"images/europe.jpg",
+    link:"europe.html",
+    description:"2都市をまとめて巡る、大学生向けヨーロッパ周遊モデル。",
+    tags:["2都市","周遊","卒業旅行"]
+  },
+
+
+  {
+    destination:"europe",
+    country:"EUROPE",
+    city:"イタリア周遊",
+    days:10,
+    budget:150000,
+    flight:78000,
+    hotel:50000,
+    image:"images/europe.jpg",
+    link:"europe.html",
+    description:"ローマ・フィレンツェ・ヴェネツィアを巡る王道イタリア旅。",
+    tags:["周遊","世界遺産","グルメ"]
+  },
+
+
+  {
+    destination:"europe",
+    country:"EUROPE",
+    city:"ヨーロッパ3都市",
+    days:14,
+    budget:210000,
+    flight:95000,
+    hotel:70000,
+    image:"images/europe.jpg",
+    link:"europe.html",
+    description:"時間のある学生だからこそできる、2週間のヨーロッパ周遊。",
+    tags:["長期旅行","3都市","卒業旅行"]
+  },
+
+
+  {
+    destination:"europe",
+    country:"EUROPE",
+    city:"ヨーロッパ豪華周遊",
+    days:14,
+    budget:280000,
+    flight:110000,
+    hotel:95000,
+    image:"images/europe.jpg",
+    link:"europe.html",
+    description:"ホテルや移動にもこだわった、特別なヨーロッパ旅行モデル。",
+    tags:["長期旅行","周遊","プレミアム"]
   }
 
 ];
 
 
 
-/* ==========================
-   GET SEARCH CONDITIONS
-========================== */
+/* =========================
+   GET PARAMETERS
+========================= */
 
 
 const params =
-  new URLSearchParams(window.location.search);
+  new URLSearchParams(
+    window.location.search
+  );
 
 
 const destination =
@@ -782,10 +783,14 @@ const budget =
   Number(params.get("budget")) || 50000;
 
 
+const minBudget =
+  params.get("minbudget") === "true";
 
-/* ==========================
+
+
+/* =========================
    DISPLAY CONDITIONS
-========================== */
+========================= */
 
 
 const destinationNames = {
@@ -823,13 +828,15 @@ const daysNames = {
 document.getElementById(
   "conditionDestination"
 ).textContent =
-  "🌏 " + destinationNames[destination];
+  "🌏 " +
+  (destinationNames[destination] || "おまかせ");
 
 
 document.getElementById(
   "conditionDays"
 ).textContent =
-  "📅 " + daysNames[days];
+  "📅 " +
+  (daysNames[days] || "日数おまかせ");
 
 
 document.getElementById(
@@ -841,13 +848,15 @@ document.getElementById(
 document.getElementById(
   "conditionBudget"
 ).textContent =
-  "💰 〜" + (budget / 10000) + "万円";
+  minBudget
+  ? "💰 20万円〜"
+  : "💰 〜" + (budget / 10000) + "万円";
 
 
 
-/* ==========================
-   SCORE PLANS
-========================== */
+/* =========================
+   SCORE
+========================= */
 
 
 function getScore(plan){
@@ -855,38 +864,63 @@ function getScore(plan){
   let score = 0;
 
 
-  /* 行き先 */
+  /* destination */
 
   if(destination === "all"){
 
     score += 5;
 
-  }else if(plan.destination === destination){
+  }
+  else if(plan.destination === destination){
 
-    score += 20;
+    score += 30;
+
+  }
+  else{
+
+    score -= 10;
 
   }
 
 
-  /* 予算 */
+  /* budget */
 
-  if(plan.budget <= budget){
+  if(minBudget){
 
-    score += 15;
+    if(plan.budget >= budget){
 
-  }else{
+      score += 25;
 
-    score -= Math.min(
-      10,
-      Math.floor(
-        (plan.budget - budget) / 10000
-      )
-    );
+    }
+    else{
+
+      score -= 15;
+
+    }
+
+  }
+  else{
+
+    if(plan.budget <= budget){
+
+      score += 25;
+
+    }
+    else{
+
+      score -= Math.min(
+        20,
+        Math.floor(
+          (plan.budget - budget) / 5000
+        )
+      );
+
+    }
 
   }
 
 
-  /* 日数 */
+  /* days */
 
   if(days === "all"){
 
@@ -897,7 +931,7 @@ function getScore(plan){
 
   if(days === "short" && plan.days <= 3){
 
-    score += 10;
+    score += 15;
 
   }
 
@@ -906,7 +940,7 @@ function getScore(plan){
      plan.days >= 3 &&
      plan.days <= 5){
 
-    score += 10;
+    score += 15;
 
   }
 
@@ -915,7 +949,7 @@ function getScore(plan){
      plan.days >= 5 &&
      plan.days <= 7){
 
-    score += 10;
+    score += 15;
 
   }
 
@@ -923,7 +957,7 @@ function getScore(plan){
   if(days === "week" &&
      plan.days >= 7){
 
-    score += 10;
+    score += 15;
 
   }
 
@@ -934,17 +968,23 @@ function getScore(plan){
 
 
 
-/* ==========================
+/* =========================
    SORT
-========================== */
+========================= */
 
 
 const sortedPlans =
+
   plans
+
   .map(plan => ({
+
     ...plan,
+
     score:getScore(plan)
+
   }))
+
   .sort((a,b) => {
 
     if(b.score !== a.score){
@@ -959,13 +999,41 @@ const sortedPlans =
 
 
 
-/* ==========================
-   SHOW RESULTS
-========================== */
+/* =========================
+   RESULTS
+========================= */
 
 
-const results =
-  sortedPlans.slice(0,6);
+let results = [];
+
+
+/* 20万円以上 */
+
+if(minBudget){
+
+  results =
+    sortedPlans.filter(
+      plan => plan.budget >= budget
+    );
+
+}
+
+
+/* それ以外 */
+
+else{
+
+  results =
+    sortedPlans;
+
+}
+
+
+/* 最大6件 */
+
+results =
+  results.slice(0,6);
+
 
 
 document.getElementById(
@@ -975,28 +1043,54 @@ document.getElementById(
 
 
 
-const plansContainer =
-  document.getElementById("plans");
+/* =========================
+   DISPLAY
+========================= */
 
+
+const container =
+  document.getElementById("plans");
 
 
 if(results.length === 0){
 
-  plansContainer.innerHTML = `
+  container.innerHTML = `
 
-    <div class="no-result">
+    <div style="
+      background:white;
+      border:1px solid var(--line);
+      border-radius:18px;
+      padding:45px 25px;
+      text-align:center;
+    ">
 
       <h3>
         条件に合うプランが見つかりませんでした
       </h3>
 
-      <p>
-        条件を少しゆるめて、もう一度検索してみてください。
+      <p style="
+        margin-top:8px;
+        color:var(--muted);
+        font-size:13px;
+      ">
+
+        条件を少し変更して
+        もう一度検索してみてください。
+
       </p>
 
       <a
         href="index.html"
-        class="back-button">
+        style="
+          display:inline-block;
+          margin-top:20px;
+          background:var(--blue);
+          color:white;
+          padding:11px 22px;
+          border-radius:10px;
+          font-size:12px;
+          font-weight:800;
+        ">
 
         条件を変更する
 
@@ -1006,125 +1100,136 @@ if(results.length === 0){
 
   `;
 
-}else{
+}
 
 
-  results.forEach((plan,index) => {
+/* PLAN CARDS */
+
+else{
 
 
-    const badge =
-      index === 0
-      ? `<span class="badge">おすすめ</span>`
-      : "";
+  results.forEach(
+    (plan,index) => {
 
 
-    const tags =
-      plan.tags
-      .map(tag =>
-        `<span class="detail">${tag}</span>`
-      )
-      .join("");
+      const badge =
+        index === 0
+        ? `<span class="badge">おすすめ</span>`
+        : "";
 
 
-    plansContainer.innerHTML += `
-
-      <article class="plan">
-
-
-        <div
-          class="plan-image"
-          style="
-            background-image:
-            url('${plan.image}');
-          ">
-        </div>
+      const tags =
+        plan.tags
+        .map(
+          tag =>
+          `<span class="detail">${tag}</span>`
+        )
+        .join("");
 
 
-        <div class="plan-body">
+      container.innerHTML += `
+
+        <article class="plan">
 
 
-          <div class="plan-top">
-
-            <span class="country">
-              ${plan.country}
-            </span>
-
-            ${badge}
-
+          <div
+            class="plan-image"
+            style="
+              background-image:
+              url('${plan.image}');
+            ">
           </div>
 
 
-          <h3>
-            ${plan.city}
-          </h3>
+          <div class="plan-body">
 
 
-          <p class="description">
-            ${plan.description}
-          </p>
+            <div class="plan-top">
 
+              <span class="country">
+                ${plan.country}
+              </span>
 
-          <div class="price">
-
-            ¥${plan.budget.toLocaleString()}
-            <small>〜 / 1人</small>
-
-          </div>
-
-
-          <div class="details">
-
-            <span class="detail">
-              📅 ${plan.days}泊${plan.days + 1}日
-            </span>
-
-            ${tags}
-
-          </div>
-
-
-          <div class="breakdown">
-
-            <div>
-
-              航空券
-
-              <strong>
-                ¥${plan.flight.toLocaleString()}〜
-              </strong>
+              ${badge}
 
             </div>
 
 
-            <div>
+            <h3>
+              ${plan.city}
+            </h3>
 
-              ホテル
 
-              <strong>
-                ¥${plan.hotel.toLocaleString()}〜
-              </strong>
+            <p class="description">
+              ${plan.description}
+            </p>
+
+
+            <div class="price">
+
+              ¥${plan.budget.toLocaleString()}
+
+              <small>
+                〜 / 1人
+              </small>
 
             </div>
 
+
+            <div class="details">
+
+              <span class="detail">
+                📅 ${plan.days}泊${plan.days + 1}日
+              </span>
+
+              ${tags}
+
+            </div>
+
+
+            <div class="breakdown">
+
+              <div>
+
+                航空券
+
+                <strong>
+                  ¥${plan.flight.toLocaleString()}〜
+                </strong>
+
+              </div>
+
+
+              <div>
+
+                ホテル
+
+                <strong>
+                  ¥${plan.hotel.toLocaleString()}〜
+                </strong>
+
+              </div>
+
+            </div>
+
+
+            <a
+              href="${plan.link}"
+              class="plan-button">
+
+              この旅を詳しく見る →
+
+            </a>
+
+
           </div>
 
+        </article>
 
-          <a
-            href="${plan.link}"
-            class="plan-button">
+      `;
 
-            この旅を詳しく見る →
-
-          </a>
-
-
-        </div>
-
-      </article>
-
-    `;
-
-  });
+    }
+  );
 
 }
 
