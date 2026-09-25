@@ -195,9 +195,25 @@ nav a:hover{
   letter-spacing:.1em
 }
 
-.value{
+.search-box select{
+  width:100%;
+  border:0;
+  outline:0;
+  background:white;
+  color:var(--ink);
+  font-family:inherit;
   font-size:14px;
-  font-weight:700
+  font-weight:800;
+  cursor:pointer;
+  padding:3px 0
+}
+
+.search-box select:focus{
+  color:var(--blue)
+}
+
+.search-box option{
+  font-weight:600
 }
 
 .sub{
@@ -206,7 +222,7 @@ nav a:hover{
 }
 
 .search-btn{
-  min-width:115px;
+  min-width:125px;
   border:0;
   border-radius:12px;
   background:var(--blue);
@@ -583,7 +599,8 @@ footer p{
   }
 
   .search-btn{
-    grid-column:1/-1
+    grid-column:1/-1;
+    min-height:55px
   }
 
   section{
@@ -644,7 +661,7 @@ footer p{
 <header>
   <div class="container header">
 
-    <a href="#" class="logo">
+    <a href="index.html" class="logo">
       UNI<span>TRIP</span>
     </a>
 
@@ -697,33 +714,155 @@ footer p{
   <div class="search-box">
 
     <div class="field">
-      <span class="label">DESTINATION</span>
-      <span class="value">行き先を入力</span>
-      <span class="sub">例：韓国、タイ、バンコクなど</span>
+
+      <span class="label">
+        DESTINATION
+      </span>
+
+      <select id="destination">
+
+        <option value="all">
+          行き先を選択
+        </option>
+
+        <option value="korea">
+          🇰🇷 韓国
+        </option>
+
+        <option value="thailand">
+          🇹🇭 タイ
+        </option>
+
+        <option value="taiwan">
+          🇹🇼 台湾
+        </option>
+
+        <option value="philippines">
+          🇵🇭 フィリピン
+        </option>
+
+        <option value="europe">
+          🇪🇺 ヨーロッパ
+        </option>
+
+      </select>
+
+      <span class="sub">
+        行きたい場所
+      </span>
+
     </div>
 
-    <div class="field">
-      <span class="label">DATE</span>
-      <span class="value">出発日・帰国日</span>
-      <span class="sub">日付を選択</span>
-    </div>
 
     <div class="field">
-      <span class="label">PEOPLE</span>
-      <span class="value">人数</span>
-      <span class="sub">1人・2人など</span>
+
+      <span class="label">
+        TRIP LENGTH
+      </span>
+
+      <select id="days">
+
+        <option value="all">
+          日数を選択
+        </option>
+
+        <option value="short">
+          2〜3日
+        </option>
+
+        <option value="medium">
+          3〜5日
+        </option>
+
+        <option value="long">
+          5〜7日
+        </option>
+
+        <option value="week">
+          1週間以上
+        </option>
+
+      </select>
+
+      <span class="sub">
+        旅行の日数
+      </span>
+
     </div>
 
+
     <div class="field">
-      <span class="label">BUDGET</span>
-      <span class="value">予算</span>
-      <span class="sub">〜5万円など</span>
+
+      <span class="label">
+        PEOPLE
+      </span>
+
+      <select id="people">
+
+        <option value="2">
+          2人
+        </option>
+
+        <option value="1">
+          1人
+        </option>
+
+        <option value="3">
+          3人
+        </option>
+
+        <option value="4">
+          4人以上
+        </option>
+
+      </select>
+
+      <span class="sub">
+        旅行人数
+      </span>
+
     </div>
+
+
+    <div class="field">
+
+      <span class="label">
+        BUDGET
+      </span>
+
+      <select id="budget">
+
+        <option value="50000">
+          〜5万円
+        </option>
+
+        <option value="30000">
+          〜3万円
+        </option>
+
+        <option value="70000">
+          〜7万円
+        </option>
+
+        <option value="100000">
+          〜10万円
+        </option>
+
+      </select>
+
+      <span class="sub">
+        1人あたり
+      </span>
+
+    </div>
+
 
     <button
       class="search-btn"
-      onclick="location.href='search.html'">
-      🔍 検索
+      onclick="searchTrips()">
+
+      🔍 この条件で探す
+
     </button>
 
   </div>
@@ -740,6 +879,7 @@ footer p{
     <div class="head">
 
       <div>
+
         <div class="kicker">
           POPULAR DESTINATIONS
         </div>
@@ -751,6 +891,7 @@ footer p{
         <p class="desc">
           大学生の海外旅行で気になる5エリア。
         </p>
+
       </div>
 
       <a class="more" href="#">
@@ -761,6 +902,7 @@ footer p{
 
 
     <div class="destinations">
+
 
       <!-- KOREA -->
 
@@ -1241,6 +1383,40 @@ footer p{
   </div>
 
 </footer>
+
+
+<script>
+
+function searchTrips(){
+
+  const destination =
+    document.getElementById("destination").value;
+
+  const days =
+    document.getElementById("days").value;
+
+  const people =
+    document.getElementById("people").value;
+
+  const budget =
+    document.getElementById("budget").value;
+
+
+  const params = new URLSearchParams({
+    destination: destination,
+    days: days,
+    people: people,
+    budget: budget
+  });
+
+
+  window.location.href =
+    "search.html?" + params.toString();
+
+}
+
+</script>
+
 
 </body>
 </html>
