@@ -14,41 +14,37 @@
   --cream:#F7F5EF;
   --ink:#172124;
   --muted:#6C777A;
-  --line:#DDE5E6
+  --line:#DDE5E6;
 }
 
 *{
   box-sizing:border-box;
   margin:0;
-  padding:0
+  padding:0;
 }
 
 html{
-  scroll-behavior:smooth
+  scroll-behavior:smooth;
 }
 
 body{
-  font-family:
-    -apple-system,
-    BlinkMacSystemFont,
-    "Helvetica Neue",
-    "Hiragino Kaku Gothic ProN",
-    "Yu Gothic",
-    sans-serif;
+  font-family:-apple-system,BlinkMacSystemFont,"Helvetica Neue",
+  "Hiragino Kaku Gothic ProN","Yu Gothic",sans-serif;
   background:var(--cream);
   color:var(--ink);
-  line-height:1.6
+  line-height:1.6;
 }
 
 a{
   text-decoration:none;
-  color:inherit
+  color:inherit;
 }
 
 .container{
   width:min(1180px,calc(100% - 32px));
-  margin:auto
+  margin:auto;
 }
+
 
 /* HEADER */
 
@@ -58,41 +54,41 @@ header{
   border-bottom:1px solid var(--line);
   position:sticky;
   top:0;
-  z-index:10
+  z-index:10;
 }
 
 .header{
   height:100%;
   display:flex;
   align-items:center;
-  gap:35px
+  gap:35px;
 }
 
 .logo{
   font-size:22px;
   font-weight:900;
   letter-spacing:.08em;
-  color:var(--dark)
+  color:var(--dark);
 }
 
 .logo span{
-  color:var(--blue)
+  color:var(--blue);
 }
 
 nav{
   display:flex;
   gap:27px;
-  flex:1
+  flex:1;
 }
 
 nav a{
   font-size:13px;
   font-weight:700;
-  color:#506064
+  color:#506064;
 }
 
 nav a:hover{
-  color:var(--blue)
+  color:var(--blue);
 }
 
 .search-icon{
@@ -103,55 +99,52 @@ nav a:hover{
   display:grid;
   place-items:center;
   font-weight:900;
-  color:var(--dark)
+  color:var(--dark);
 }
+
 
 /* HERO */
 
 .hero{
   min-height:500px;
   position:relative;
-
   background:
-    linear-gradient(
-      90deg,
-      rgba(23,63,74,.68),
-      rgba(23,63,74,.08)
-    ),
+    linear-gradient(90deg,rgba(23,63,74,.68),rgba(23,63,74,.08)),
     url("images/hero.jpg") center/cover,
-    #2E7C8F
+    #2E7C8F;
 }
 
 .hero-inner{
   min-height:500px;
   display:flex;
   align-items:center;
-  padding-bottom:80px
+  padding-bottom:80px;
 }
 
 .hero-copy{
   color:white;
-  width:620px
+  width:620px;
 }
 
 .eyebrow{
   font-size:11px;
   font-weight:800;
   letter-spacing:.18em;
-  margin-bottom:14px
+  margin-bottom:14px;
 }
 
 .hero h1{
   font-size:clamp(40px,5.5vw,66px);
   line-height:1.08;
   letter-spacing:-.05em;
-  margin-bottom:16px
+  margin-bottom:16px;
 }
 
 .lead{
   font-size:16px;
-  color:rgba(255,255,255,.9)
+  color:rgba(255,255,255,.9);
 }
+
 
 /* SEARCH */
 
@@ -160,92 +153,75 @@ nav a:hover{
   left:50%;
   bottom:28px;
   transform:translateX(-50%);
+
   width:min(1080px,calc(100% - 32px));
+
   background:white;
   border-radius:18px;
+
   box-shadow:0 15px 40px rgba(0,0,0,.16);
+
   padding:9px;
+
   display:grid;
-  grid-template-columns:
-    1.35fr
-    1.15fr
-    .85fr
-    1fr
-    auto;
-  gap:5px
+  grid-template-columns:1.35fr 1.15fr .85fr 1fr auto;
+  gap:5px;
 }
 
 .field{
   min-height:64px;
   padding:8px 16px;
+
   border-right:1px solid var(--line);
+
   display:flex;
   flex-direction:column;
-  justify-content:center
-}
-
-.field:last-of-type{
-  border:0
+  justify-content:center;
 }
 
 .label{
   font-size:10px;
   font-weight:900;
   color:var(--blue);
-  letter-spacing:.1em
+  letter-spacing:.1em;
 }
 
-.search-box select{
-  width:100%;
-  border:0;
-  outline:0;
-  background:white;
-  color:var(--ink);
-  font-family:inherit;
+.value{
   font-size:14px;
-  font-weight:800;
-  cursor:pointer;
-  padding:3px 0
-}
-
-.search-box select:focus{
-  color:var(--blue)
-}
-
-.search-box option{
-  font-weight:600
+  font-weight:700;
 }
 
 .sub{
   font-size:10px;
-  color:var(--muted)
+  color:var(--muted);
 }
 
 .search-btn{
-  min-width:125px;
+  min-width:115px;
   border:0;
   border-radius:12px;
   background:var(--blue);
   color:white;
   font-weight:800;
-  cursor:pointer
+  cursor:pointer;
 }
 
 .search-btn:hover{
-  background:var(--dark)
+  background:var(--dark);
 }
+
 
 /* COMMON */
 
 section{
-  padding:70px 0
+  padding:70px 0;
 }
 
 .head{
   display:flex;
   justify-content:space-between;
   align-items:end;
-  margin-bottom:24px
+  margin-bottom:24px;
 }
 
 .kicker{
@@ -253,33 +229,34 @@ section{
   font-weight:900;
   letter-spacing:.17em;
   color:var(--blue);
-  margin-bottom:5px
+  margin-bottom:5px;
 }
 
 h2{
   font-size:32px;
   letter-spacing:-.04em;
-  line-height:1.2
+  line-height:1.2;
 }
 
 .desc{
   font-size:13px;
   color:var(--muted);
-  margin-top:6px
+  margin-top:6px;
 }
 
 .more{
   font-size:12px;
   font-weight:800;
-  color:var(--blue)
+  color:var(--blue);
 }
+
 
 /* DESTINATIONS */
 
 .destinations{
   display:grid;
   grid-template-columns:repeat(5,1fr);
-  gap:14px
+  gap:14px;
 }
 
 .destination{
@@ -287,7 +264,7 @@ h2{
   border-radius:18px;
   overflow:hidden;
   position:relative;
-  background:#aac5ca
+  background:#aac5ca;
 }
 
 .dest-bg{
@@ -300,40 +277,40 @@ h2{
       rgba(10,30,36,.82),
       rgba(10,30,36,0) 65%
     ),
-    var(
-      --photo,
-      linear-gradient(135deg,#9fc2c9,#416d78)
-    ) center/cover;
+    var(--photo,
+    linear-gradient(135deg,#9fc2c9,#416d78))
+    center/cover;
 
-  transition:.25s
+  transition:.25s;
 }
 
 .destination:hover .dest-bg{
-  transform:scale(1.04)
+  transform:scale(1.04);
 }
 
 .dest-info{
   position:absolute;
   bottom:16px;
   left:17px;
-  color:white
+  color:white;
 }
 
 .dest-info small{
   font-size:9px;
   letter-spacing:.16em;
-  font-weight:800
+  font-weight:800;
 }
 
 .dest-info h3{
   font-size:23px;
-  line-height:1.1
+  line-height:1.1;
 }
 
 .dest-info p{
   font-size:10px;
-  opacity:.85
+  opacity:.85;
 }
+
 
 /* BUDGET */
 
@@ -341,75 +318,84 @@ h2{
   background:var(--light);
   border:1px solid #d4e7ea;
   border-radius:22px;
-  padding:28px
+  padding:28px;
 }
 
 .budget-inner{
   display:flex;
   align-items:center;
-  gap:25px
+  gap:25px;
 }
 
 .budget-title{
-  min-width:260px
+  min-width:260px;
 }
 
 .budget-title h2{
-  font-size:25px
+  font-size:25px;
 }
 
 .budget-title p{
   font-size:12px;
-  color:var(--muted)
+  color:var(--muted);
 }
 
 .budget-list{
   display:grid;
-  grid-template-columns:repeat(4,1fr);
+  grid-template-columns:repeat(3,1fr);
   gap:10px;
-  flex:1
+  flex:1;
 }
 
 .budget-card{
   background:white;
   border:1px solid var(--line);
   border-radius:13px;
+
   min-height:68px;
   padding:0 16px;
+
   display:flex;
   align-items:center;
   justify-content:space-between;
+
   font-size:14px;
-  font-weight:800
+  font-weight:800;
+
+  transition:.2s;
 }
 
 .budget-card:hover{
   border-color:var(--blue);
-  transform:translateY(-2px)
+  transform:translateY(-2px);
+}
+
+.budget-card small{
+  display:block;
+  font-size:9px;
+  color:var(--muted);
+  font-weight:600;
 }
 
 .arrow{
   color:var(--blue);
-  font-size:18px
+  font-size:18px;
 }
+
 
 /* ARTICLES */
 
 .articles{
   display:grid;
   grid-template-columns:repeat(4,1fr);
-  gap:15px
+  gap:15px;
 }
 
 .article{
   background:white;
   border:1px solid var(--line);
   border-radius:18px;
-  overflow:hidden
-}
-
-.article:hover{
-  transform:translateY(-3px)
+  overflow:hidden;
 }
 
 .photo{
@@ -417,11 +403,11 @@ h2{
   background-position:center;
   background-size:cover;
   background:
-    linear-gradient(135deg,#d9e7e9,#9fc2c9)
+    linear-gradient(135deg,#d9e7e9,#9fc2c9);
 }
 
 .article-body{
-  padding:17px
+  padding:17px;
 }
 
 .tag{
@@ -431,234 +417,242 @@ h2{
   border-radius:999px;
   padding:3px 8px;
   font-size:9px;
-  font-weight:900
+  font-weight:900;
 }
 
 .article h3{
   font-size:15px;
   line-height:1.4;
-  margin:9px 0 6px
+  margin:9px 0 6px;
 }
 
 .article p{
   font-size:11px;
-  color:var(--muted)
+  color:var(--muted);
 }
 
 .date{
   font-size:9px;
   color:#9aa5a8;
-  margin-top:10px
+  margin-top:10px;
 }
+
 
 /* SERVICES */
 
 .services{
   display:grid;
   grid-template-columns:repeat(3,1fr);
-  gap:15px
+  gap:15px;
 }
 
 .service{
   background:white;
   border:1px solid var(--line);
   border-radius:18px;
-  padding:25px
+  padding:25px;
 }
 
 .service-num{
   font-size:11px;
   font-weight:900;
   color:var(--blue);
-  letter-spacing:.12em
+  letter-spacing:.12em;
 }
 
 .service h3{
   font-size:20px;
-  margin:15px 0 7px
+  margin:15px 0 7px;
 }
 
 .service p{
   font-size:12px;
-  color:var(--muted)
+  color:var(--muted);
 }
+
 
 /* FOOTER */
 
 footer{
   background:var(--dark);
   color:white;
-  padding:38px 0
+  padding:38px 0;
 }
 
 .footer{
   display:flex;
-  justify-content:space-between
+  justify-content:space-between;
 }
 
 .footer-logo{
   font-size:22px;
   font-weight:900;
-  letter-spacing:.08em
+  letter-spacing:.08em;
 }
 
 footer p{
   font-size:11px;
   color:rgba(255,255,255,.6);
-  margin-top:4px
+  margin-top:4px;
 }
+
 
 /* TABLET */
 
 @media(max-width:900px){
 
   nav{
-    gap:15px
+    gap:15px;
   }
 
   .search-box{
-    grid-template-columns:1fr 1fr
+    grid-template-columns:1fr 1fr;
   }
 
   .field{
     border:0;
-    border-bottom:1px solid var(--line)
+    border-bottom:1px solid var(--line);
   }
 
   .search-btn{
-    min-height:55px
+    min-height:55px;
   }
 
   .destinations{
-    grid-template-columns:repeat(3,1fr)
+    grid-template-columns:repeat(3,1fr);
   }
 
   .budget-inner{
-    display:block
+    display:block;
   }
 
   .budget-list{
-    margin-top:18px
+    margin-top:18px;
   }
 
   .articles{
-    grid-template-columns:repeat(2,1fr)
+    grid-template-columns:repeat(2,1fr);
   }
+
 }
+
 
 /* MOBILE */
 
 @media(max-width:650px){
 
   .container{
-    width:calc(100% - 24px)
+    width:calc(100% - 24px);
   }
 
   header{
-    height:62px
+    height:62px;
   }
 
   nav,
   .search-icon{
-    display:none
+    display:none;
   }
 
   .header:after{
     content:"☰";
     margin-left:auto;
-    font-size:21px
+    font-size:21px;
   }
 
   .hero,
   .hero-inner{
-    min-height:560px
+    min-height:560px;
   }
 
   .hero-inner{
     align-items:flex-start;
-    padding-top:60px
+    padding-top:60px;
   }
 
   .hero-copy{
-    width:100%
+    width:100%;
   }
 
   .hero h1{
-    font-size:43px
+    font-size:43px;
   }
 
   .search-box{
     bottom:14px;
     grid-template-columns:1fr 1fr;
-    padding:7px
+    padding:7px;
   }
 
   .field{
     min-height:55px;
-    padding:6px 10px
+    padding:6px 10px;
   }
 
   .search-btn{
     grid-column:1/-1;
-    min-height:55px
   }
 
   section{
-    padding:52px 0
+    padding:52px 0;
   }
 
   .head{
-    display:block
+    display:block;
   }
 
   h2{
-    font-size:27px
+    font-size:27px;
   }
 
   .more{
     display:inline-block;
-    margin-top:10px
+    margin-top:10px;
   }
 
   .destinations{
-    grid-template-columns:1fr 1fr
+    grid-template-columns:1fr 1fr;
   }
 
   .destination{
-    height:190px
+    height:190px;
   }
 
   .dest-info h3{
-    font-size:20px
+    font-size:20px;
   }
 
   .dest-info p{
-    display:none
+    display:none;
   }
 
   .budget{
-    padding:20px
+    padding:20px;
   }
 
   .budget-list{
-    grid-template-columns:1fr 1fr
+    grid-template-columns:1fr 1fr;
   }
 
   .articles,
   .services{
-    grid-template-columns:1fr
+    grid-template-columns:1fr;
   }
 
   .footer{
-    display:block
+    display:block;
   }
+
 }
 </style>
 </head>
 
+
 <body>
 
+
 <header>
+
   <div class="container header">
 
     <a href="index.html" class="logo">
@@ -673,15 +667,15 @@ footer p{
       <a href="#budget">予算から探す</a>
     </nav>
 
-    <div class="search-icon">
-      ⌕
-    </div>
+    <div class="search-icon">⌕</div>
 
   </div>
+
 </header>
 
 
 <main>
+
 
 <!-- HERO -->
 
@@ -709,9 +703,10 @@ footer p{
   </div>
 
 
-  <!-- SEARCH BOX -->
+  <!-- SEARCH -->
 
   <div class="search-box">
+
 
     <div class="field">
 
@@ -719,37 +714,34 @@ footer p{
         DESTINATION
       </span>
 
-      <select id="destination">
+      <select id="destination"
+        style="border:0;background:white;font-size:14px;font-weight:700;outline:none;margin-top:3px;">
 
         <option value="all">
           行き先を選択
         </option>
 
         <option value="korea">
-          🇰🇷 韓国
+          韓国
         </option>
 
         <option value="thailand">
-          🇹🇭 タイ
+          タイ
         </option>
 
         <option value="taiwan">
-          🇹🇼 台湾
+          台湾
         </option>
 
         <option value="philippines">
-          🇵🇭 フィリピン
+          フィリピン
         </option>
 
         <option value="europe">
-          🇪🇺 ヨーロッパ
+          ヨーロッパ
         </option>
 
       </select>
-
-      <span class="sub">
-        行きたい場所
-      </span>
 
     </div>
 
@@ -757,10 +749,11 @@ footer p{
     <div class="field">
 
       <span class="label">
-        TRIP LENGTH
+        DAYS
       </span>
 
-      <select id="days">
+      <select id="days"
+        style="border:0;background:white;font-size:14px;font-weight:700;outline:none;margin-top:3px;">
 
         <option value="all">
           日数を選択
@@ -784,10 +777,6 @@ footer p{
 
       </select>
 
-      <span class="sub">
-        旅行の日数
-      </span>
-
     </div>
 
 
@@ -797,7 +786,8 @@ footer p{
         PEOPLE
       </span>
 
-      <select id="people">
+      <select id="people"
+        style="border:0;background:white;font-size:14px;font-weight:700;outline:none;margin-top:3px;">
 
         <option value="2">
           2人
@@ -812,14 +802,10 @@ footer p{
         </option>
 
         <option value="4">
-          4人以上
+          4人
         </option>
 
       </select>
-
-      <span class="sub">
-        旅行人数
-      </span>
 
     </div>
 
@@ -830,7 +816,8 @@ footer p{
         BUDGET
       </span>
 
-      <select id="budget">
+      <select id="budget"
+        style="border:0;background:white;font-size:14px;font-weight:700;outline:none;margin-top:3px;">
 
         <option value="50000">
           〜5万円
@@ -848,11 +835,15 @@ footer p{
           〜10万円
         </option>
 
-      </select>
+        <option value="150000">
+          〜15万円
+        </option>
 
-      <span class="sub">
-        1人あたり
-      </span>
+        <option value="200000">
+          20万円〜
+        </option>
+
+      </select>
 
     </div>
 
@@ -861,7 +852,7 @@ footer p{
       class="search-btn"
       onclick="searchTrips()">
 
-      🔍 この条件で探す
+      🔍 検索
 
     </button>
 
@@ -870,11 +861,13 @@ footer p{
 </section>
 
 
+
 <!-- DESTINATIONS -->
 
 <section id="destinations">
 
   <div class="container">
+
 
     <div class="head">
 
@@ -894,19 +887,15 @@ footer p{
 
       </div>
 
-      <a class="more" href="#">
-        すべての行き先を見る →
-      </a>
-
     </div>
 
 
     <div class="destinations">
 
 
-      <!-- KOREA -->
-
-      <a class="destination" href="korea.html">
+      <a
+        class="destination"
+        href="korea.html">
 
         <div
           class="dest-bg"
@@ -915,13 +904,9 @@ footer p{
 
         <div class="dest-info">
 
-          <small>
-            KOREA
-          </small>
+          <small>KOREA</small>
 
-          <h3>
-            韓国
-          </h3>
+          <h3>韓国</h3>
 
           <p>
             近くて、安くて、何度でも。
@@ -932,9 +917,9 @@ footer p{
       </a>
 
 
-      <!-- THAILAND -->
-
-      <a class="destination" href="thailand.html">
+      <a
+        class="destination"
+        href="thailand.html">
 
         <div
           class="dest-bg"
@@ -943,13 +928,9 @@ footer p{
 
         <div class="dest-info">
 
-          <small>
-            THAILAND
-          </small>
+          <small>THAILAND</small>
 
-          <h3>
-            タイ
-          </h3>
+          <h3>タイ</h3>
 
           <p>
             街・グルメ・リゾート。
@@ -960,9 +941,9 @@ footer p{
       </a>
 
 
-      <!-- TAIWAN -->
-
-      <a class="destination" href="taiwan.html">
+      <a
+        class="destination"
+        href="taiwan.html">
 
         <div
           class="dest-bg"
@@ -971,13 +952,9 @@ footer p{
 
         <div class="dest-info">
 
-          <small>
-            TAIWAN
-          </small>
+          <small>TAIWAN</small>
 
-          <h3>
-            台湾
-          </h3>
+          <h3>台湾</h3>
 
           <p>
             食べ歩きと街歩き。
@@ -988,9 +965,9 @@ footer p{
       </a>
 
 
-      <!-- PHILIPPINES -->
-
-      <a class="destination" href="philippines.html">
+      <a
+        class="destination"
+        href="philippines.html">
 
         <div
           class="dest-bg"
@@ -999,13 +976,9 @@ footer p{
 
         <div class="dest-info">
 
-          <small>
-            PHILIPPINES
-          </small>
+          <small>PHILIPPINES</small>
 
-          <h3>
-            フィリピン
-          </h3>
+          <h3>フィリピン</h3>
 
           <p>
             海とリゾートを楽しむ。
@@ -1016,9 +989,9 @@ footer p{
       </a>
 
 
-      <!-- EUROPE -->
-
-      <a class="destination" href="europe.html">
+      <a
+        class="destination"
+        href="europe.html">
 
         <div
           class="dest-bg"
@@ -1027,13 +1000,9 @@ footer p{
 
         <div class="dest-info">
 
-          <small>
-            EUROPE
-          </small>
+          <small>EUROPE</small>
 
-          <h3>
-            ヨーロッパ
-          </h3>
+          <h3>ヨーロッパ</h3>
 
           <p>
             卒業旅行にも。
@@ -1043,11 +1012,13 @@ footer p{
 
       </a>
 
+
     </div>
 
   </div>
 
 </section>
+
 
 
 <!-- BUDGET -->
@@ -1059,6 +1030,7 @@ footer p{
     <div class="budget">
 
       <div class="budget-inner">
+
 
         <div class="budget-title">
 
@@ -1079,25 +1051,90 @@ footer p{
 
         <div class="budget-list">
 
-          <a class="budget-card" href="#">
-            〜3万円
+
+          <a
+            class="budget-card"
+            href="search.html?destination=all&days=all&people=2&budget=30000">
+
+            <div>
+              〜3万円
+              <small>近場・短期旅行</small>
+            </div>
+
             <span class="arrow">→</span>
+
           </a>
 
-          <a class="budget-card" href="#">
-            〜5万円
+
+          <a
+            class="budget-card"
+            href="search.html?destination=all&days=all&people=2&budget=50000">
+
+            <div>
+              〜5万円
+              <small>学生人気ゾーン</small>
+            </div>
+
             <span class="arrow">→</span>
+
           </a>
 
-          <a class="budget-card" href="#">
-            〜7万円
+
+          <a
+            class="budget-card"
+            href="search.html?destination=all&days=all&people=2&budget=70000">
+
+            <div>
+              〜7万円
+              <small>海外旅行の選択肢UP</small>
+            </div>
+
             <span class="arrow">→</span>
+
           </a>
 
-          <a class="budget-card" href="#">
-            〜10万円
+
+          <a
+            class="budget-card"
+            href="search.html?destination=all&days=all&people=2&budget=100000">
+
+            <div>
+              〜10万円
+              <small>アジアを満喫</small>
+            </div>
+
             <span class="arrow">→</span>
+
           </a>
+
+
+          <a
+            class="budget-card"
+            href="search.html?destination=all&days=all&people=2&budget=150000">
+
+            <div>
+              〜15万円
+              <small>ヨーロッパも視野に</small>
+            </div>
+
+            <span class="arrow">→</span>
+
+          </a>
+
+
+          <a
+            class="budget-card"
+            href="search.html?destination=all&days=all&people=2&budget=200000&minbudget=true">
+
+            <div>
+              20万円〜
+              <small>卒業旅行・長期旅行</small>
+            </div>
+
+            <span class="arrow">→</span>
+
+          </a>
+
 
         </div>
 
@@ -1108,6 +1145,7 @@ footer p{
   </div>
 
 </section>
+
 
 
 <!-- ARTICLES -->
@@ -1134,17 +1172,11 @@ footer p{
 
       </div>
 
-      <a class="more" href="#">
-        すべての記事を見る →
-      </a>
-
     </div>
 
 
     <div class="articles">
 
-
-      <!-- ARTICLE 1 -->
 
       <a class="article" href="#">
 
@@ -1176,8 +1208,6 @@ footer p{
       </a>
 
 
-      <!-- ARTICLE 2 -->
-
       <a class="article" href="#">
 
         <div
@@ -1207,8 +1237,6 @@ footer p{
 
       </a>
 
-
-      <!-- ARTICLE 3 -->
 
       <a class="article" href="#">
 
@@ -1240,8 +1268,6 @@ footer p{
       </a>
 
 
-      <!-- ARTICLE 4 -->
-
       <a class="article" href="#">
 
         <div
@@ -1271,11 +1297,13 @@ footer p{
 
       </a>
 
+
     </div>
 
   </div>
 
 </section>
+
 
 
 <!-- SERVICES -->
@@ -1305,7 +1333,9 @@ footer p{
       </article>
 
 
-      <article class="service" id="hotel">
+      <article
+        class="service"
+        id="hotel">
 
         <div class="service-num">
           02 / HOTEL
@@ -1347,10 +1377,9 @@ footer p{
 
 </section>
 
+
 </main>
 
-
-<!-- FOOTER -->
 
 <footer>
 
@@ -1368,6 +1397,7 @@ footer p{
 
     </div>
 
+
     <div>
 
       <p>
@@ -1383,6 +1413,7 @@ footer p{
   </div>
 
 </footer>
+
 
 
 <script>
@@ -1402,12 +1433,18 @@ function searchTrips(){
     document.getElementById("budget").value;
 
 
-  const params = new URLSearchParams({
-    destination: destination,
-    days: days,
-    people: people,
-    budget: budget
-  });
+  const params =
+    new URLSearchParams({
+
+      destination:destination,
+
+      days:days,
+
+      people:people,
+
+      budget:budget
+
+    });
 
 
   window.location.href =
