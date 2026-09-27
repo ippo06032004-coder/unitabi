@@ -1,492 +1,247 @@
-```html
 <!DOCTYPE html>
 <html lang="ja">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<meta name="description" content="UNI TRIP｜韓国旅行を大学生目線で紹介">
 <title>韓国旅行｜UNI TRIP</title>
 
 <style>
-:root{
-  --blue:#2E7C8F;
-  --dark:#173F4A;
-  --light:#E8F3F5;
-  --cream:#F7F5EF;
-  --ink:#172124;
-  --muted:#6C777A;
-  --line:#DDE5E6;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-*{
-  box-sizing:border-box;
-  margin:0;
-  padding:0;
+:root {
+  --blue: #2E7C8F;
+  --dark: #173F4A;
+  --light: #E8F3F5;
+  --cream: #F7F5EF;
+  --ink: #172124;
+  --muted: #6C777A;
+  --line: #DDE5E6;
 }
 
-html{
-  scroll-behavior:smooth;
+body {
+  font-family: Arial, "Noto Sans JP", sans-serif;
+  color: var(--ink);
+  background: var(--cream);
+  line-height: 1.7;
 }
 
-body{
-  font-family:
-    -apple-system,
-    BlinkMacSystemFont,
-    "Helvetica Neue",
-    "Hiragino Kaku Gothic ProN",
-    "Yu Gothic",
-    sans-serif;
-  background:var(--cream);
-  color:var(--ink);
-  line-height:1.6;
+a {
+  color: inherit;
+  text-decoration: none;
 }
 
-a{
-  text-decoration:none;
-  color:inherit;
+header {
+  width: 100%;
+  background: rgba(255,255,255,0.95);
+  border-bottom: 1px solid var(--line);
+  position: sticky;
+  top: 0;
+  z-index: 100;
 }
 
-.container{
-  width:min(1180px,calc(100% - 32px));
-  margin:auto;
+.header-inner {
+  max-width: 1180px;
+  margin: auto;
+  height: 72px;
+  padding: 0 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
-/* HEADER */
-
-header{
-  height:70px;
-  background:rgba(247,245,239,.96);
-  border-bottom:1px solid var(--line);
-  position:sticky;
-  top:0;
-  z-index:10;
+.logo {
+  font-size: 24px;
+  font-weight: 800;
+  color: var(--dark);
 }
 
-.header{
-  height:100%;
-  display:flex;
-  align-items:center;
-  gap:35px;
+nav {
+  display: flex;
+  gap: 28px;
+  font-size: 14px;
+  font-weight: 600;
 }
 
-.logo{
-  font-size:22px;
-  font-weight:900;
-  letter-spacing:.08em;
-  color:var(--dark);
+nav a:hover {
+  color: var(--blue);
 }
 
-.logo span{
-  color:var(--blue);
-}
-
-nav{
-  display:flex;
-  gap:27px;
-  flex:1;
-}
-
-nav a{
-  font-size:13px;
-  font-weight:700;
-  color:#506064;
-}
-
-nav a:hover{
-  color:var(--blue);
-}
-
-.back{
-  font-size:13px;
-  font-weight:800;
-  color:var(--blue);
-}
-
-/* HERO */
-
-.hero{
-  min-height:500px;
-  position:relative;
-
+.hero {
+  min-height: 540px;
   background:
-    linear-gradient(
-      90deg,
-      rgba(23,63,74,.72),
-      rgba(23,63,74,.15)
-    ),
-    url("images/korea.jpg") center/cover,
-    #2E7C8F;
+    linear-gradient(rgba(0,0,0,.28), rgba(0,0,0,.42)),
+    url("images/korea-main.jpg") center/cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  padding: 60px 20px;
 }
 
-.hero-inner{
-  min-height:500px;
-  display:flex;
-  align-items:center;
+.hero-content {
+  max-width: 800px;
 }
 
-.hero-copy{
-  color:white;
-  width:650px;
-  padding:50px 0;
+.hero h1 {
+  font-size: clamp(42px, 7vw, 78px);
+  line-height: 1.1;
+  margin-bottom: 18px;
+  font-weight: 800;
 }
 
-.eyebrow{
-  font-size:11px;
-  font-weight:800;
-  letter-spacing:.18em;
-  margin-bottom:14px;
+.hero p {
+  font-size: 18px;
+  opacity: .95;
 }
 
-.hero h1{
-  font-size:clamp(42px,5.5vw,68px);
-  line-height:1.08;
-  letter-spacing:-.05em;
-  margin-bottom:18px;
+.container {
+  max-width: 1180px;
+  margin: auto;
+  padding: 70px 24px;
 }
 
-.lead{
-  font-size:16px;
-  color:rgba(255,255,255,.92);
+.section-title {
+  margin-bottom: 35px;
 }
 
-/* SECTION */
-
-section{
-  padding:70px 0;
+.section-title h2 {
+  font-size: 32px;
+  color: var(--dark);
+  margin-bottom: 8px;
 }
 
-.head{
-  display:flex;
-  justify-content:space-between;
-  align-items:end;
-  margin-bottom:24px;
+.section-title p {
+  color: var(--muted);
 }
 
-.kicker{
-  font-size:10px;
-  font-weight:900;
-  letter-spacing:.17em;
-  color:var(--blue);
-  margin-bottom:5px;
+.city-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
 }
 
-h2{
-  font-size:32px;
-  letter-spacing:-.04em;
-  line-height:1.2;
+.city-card {
+  background: white;
+  border-radius: 18px;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  transition: .25s;
 }
 
-.desc{
-  font-size:13px;
-  color:var(--muted);
-  margin-top:6px;
+.city-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 30px rgba(0,0,0,.08);
 }
 
-/* CITY CARDS */
-
-.cities{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:15px;
+.city-card img {
+  width: 100%;
+  height: 230px;
+  object-fit: cover;
+  display: block;
 }
 
-.city{
-  background:white;
-  border:1px solid var(--line);
-  border-radius:18px;
-  overflow:hidden;
-  transition:.25s;
+.city-info {
+  padding: 22px;
 }
 
-.city:hover{
-  transform:translateY(-4px);
-  box-shadow:0 10px 30px rgba(0,0,0,.08);
+.city-info h3 {
+  font-size: 24px;
+  color: var(--dark);
+  margin-bottom: 8px;
 }
 
-.city-photo{
-  height:210px;
-  background-size:cover;
-  background-position:center;
+.city-info p {
+  color: var(--muted);
+  font-size: 14px;
 }
 
-.city-body{
-  padding:20px;
+.info-section {
+  background: var(--light);
 }
 
-.city-body small{
-  color:var(--blue);
-  font-size:9px;
-  letter-spacing:.15em;
-  font-weight:900;
+.info-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
 }
 
-.city-body h3{
-  font-size:23px;
-  margin:6px 0;
+.info-card {
+  background: white;
+  border-radius: 16px;
+  padding: 25px;
 }
 
-.city-body p{
-  color:var(--muted);
-  font-size:12px;
+.info-card h3 {
+  color: var(--dark);
+  margin-bottom: 10px;
 }
 
-/* BUDGET */
-
-.budget{
-  background:var(--light);
-  border:1px solid #d4e7ea;
-  border-radius:22px;
-  padding:30px;
+.info-card p {
+  color: var(--muted);
+  font-size: 14px;
 }
 
-.budget-inner{
-  display:flex;
-  align-items:center;
-  gap:30px;
+.cta {
+  background: var(--dark);
+  color: white;
+  text-align: center;
+  padding: 70px 24px;
 }
 
-.budget-title{
-  min-width:280px;
+.cta h2 {
+  font-size: 34px;
+  margin-bottom: 15px;
 }
 
-.budget-title h2{
-  font-size:25px;
+.cta p {
+  margin-bottom: 28px;
+  opacity: .9;
 }
 
-.budget-title p{
-  font-size:12px;
-  color:var(--muted);
-  margin-top:5px;
+.button {
+  display: inline-block;
+  background: white;
+  color: var(--dark);
+  padding: 13px 28px;
+  border-radius: 999px;
+  font-weight: 700;
 }
 
-.budget-list{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:10px;
-  flex:1;
+footer {
+  background: #102F38;
+  color: white;
+  text-align: center;
+  padding: 30px 20px;
+  font-size: 13px;
+  opacity: .95;
 }
 
-.budget-card{
-  background:white;
-  border:1px solid var(--line);
-  border-radius:13px;
-  min-height:70px;
-  padding:0 16px;
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  font-size:14px;
-  font-weight:800;
-  transition:.2s;
-}
-
-.budget-card:hover{
-  border-color:var(--blue);
-  transform:translateY(-2px);
-}
-
-.arrow{
-  color:var(--blue);
-  font-size:18px;
-}
-
-/* TIPS */
-
-.tips{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:15px;
-}
-
-.tip{
-  background:white;
-  border:1px solid var(--line);
-  border-radius:18px;
-  padding:25px;
-}
-
-.tip-num{
-  font-size:11px;
-  font-weight:900;
-  color:var(--blue);
-  letter-spacing:.12em;
-}
-
-.tip h3{
-  font-size:19px;
-  margin:14px 0 7px;
-}
-
-.tip p{
-  font-size:12px;
-  color:var(--muted);
-}
-
-/* CTA */
-
-.cta{
-  background:var(--dark);
-  border-radius:22px;
-  padding:45px;
-  color:white;
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  gap:25px;
-}
-
-.cta h2{
-  font-size:28px;
-}
-
-.cta p{
-  font-size:12px;
-  color:rgba(255,255,255,.65);
-  margin-top:7px;
-}
-
-.cta-button{
-  background:white;
-  color:var(--dark);
-  padding:13px 22px;
-  border-radius:10px;
-  font-size:13px;
-  font-weight:900;
-  white-space:nowrap;
-}
-
-.cta-button:hover{
-  background:var(--light);
-}
-
-/* FOOTER */
-
-footer{
-  background:var(--dark);
-  color:white;
-  padding:38px 0;
-  margin-top:70px;
-}
-
-.footer{
-  display:flex;
-  justify-content:space-between;
-}
-
-.footer-logo{
-  font-size:22px;
-  font-weight:900;
-  letter-spacing:.08em;
-}
-
-footer p{
-  font-size:11px;
-  color:rgba(255,255,255,.6);
-  margin-top:4px;
-}
-
-/* MOBILE */
-
-@media(max-width:900px){
-
-  nav{
-    gap:15px;
+@media (max-width: 768px) {
+  .header-inner {
+    height: 62px;
   }
 
-  .cities,
-  .tips{
-    grid-template-columns:1fr 1fr;
+  nav {
+    gap: 14px;
+    font-size: 12px;
   }
 
-  .budget-inner{
-    display:block;
+  .hero {
+    min-height: 460px;
   }
 
-  .budget-list{
-    margin-top:18px;
-  }
-}
-
-@media(max-width:650px){
-
-  .container{
-    width:calc(100% - 24px);
+  .city-grid,
+  .info-grid {
+    grid-template-columns: 1fr;
   }
 
-  header{
-    height:62px;
-  }
-
-  nav{
-    display:none;
-  }
-
-  .header:after{
-    content:"☰";
-    margin-left:auto;
-    font-size:21px;
-  }
-
-  .hero,
-  .hero-inner{
-    min-height:520px;
-  }
-
-  .hero-inner{
-    align-items:flex-start;
-    padding-top:70px;
-  }
-
-  .hero-copy{
-    width:100%;
-  }
-
-  .hero h1{
-    font-size:43px;
-  }
-
-  section{
-    padding:52px 0;
-  }
-
-  .head{
-    display:block;
-  }
-
-  h2{
-    font-size:27px;
-  }
-
-  .cities,
-  .tips{
-    grid-template-columns:1fr;
-  }
-
-  .city-photo{
-    height:200px;
-  }
-
-  .budget{
-    padding:20px;
-  }
-
-  .budget-list{
-    grid-template-columns:1fr;
-  }
-
-  .cta{
-    display:block;
-    padding:30px;
-  }
-
-  .cta-button{
-    display:inline-block;
-    margin-top:20px;
-  }
-
-  .footer{
-    display:block;
+  .container {
+    padding: 50px 18px;
   }
 }
 </style>
@@ -494,230 +249,91 @@ footer p{
 
 <body>
 
-<!-- HEADER -->
-
 <header>
-  <div class="container header">
-
-    <a href="index.html" class="logo">
-      UNI<span>TRIP</span>
-    </a>
+  <div class="header-inner">
+    <a href="index.html" class="logo">UNI TRIP</a>
 
     <nav>
-      <a href="index.html#destinations">行き先から探す</a>
-      <a href="index.html#flight">航空券</a>
-      <a href="index.html#hotel">ホテル</a>
-      <a href="index.html#articles">旅行記事</a>
-      <a href="index.html#budget">予算から探す</a>
+      <a href="index.html">ホーム</a>
+      <a href="korea.html">韓国</a>
+      <a href="thailand.html">タイ</a>
+      <a href="taiwan.html">台湾</a>
+      <a href="philippines.html">フィリピン</a>
+      <a href="europe.html">ヨーロッパ</a>
     </nav>
-
-    <a href="index.html" class="back">
-      ← トップへ戻る
-    </a>
-
   </div>
 </header>
 
-
 <main>
 
-<!-- HERO -->
-
 <section class="hero">
+  <div class="hero-content">
+    <h1>KOREA</h1>
+    <p>近くて安い。学生旅行で行きたい韓国。</p>
+  </div>
+</section>
 
-  <div class="container hero-inner">
+<section class="container">
 
-    <div class="hero-copy">
+  <div class="section-title">
+    <h2>韓国の人気都市</h2>
+    <p>学生旅行で訪れたい韓国のおすすめ都市をチェック。</p>
+  </div>
 
-      <div class="eyebrow">
-        KOREA / UNI TRIP
+  <div class="city-grid">
+
+    <a href="#" class="city-card">
+      <img src="images/seoul.jpg" alt="ソウル">
+      <div class="city-info">
+        <h3>Seoul</h3>
+        <p>ショッピング、カフェ、グルメまで楽しめる韓国の定番都市。</p>
       </div>
+    </a>
 
-      <h1>
-        韓国を、<br>
-        もっと自由に。
-      </h1>
+    <a href="#" class="city-card">
+      <img src="images/busan.jpg" alt="釜山">
+      <div class="city-info">
+        <h3>Busan</h3>
+        <p>海と街を一緒に楽しめる、ソウルとは違った韓国旅行。</p>
+      </div>
+    </a>
 
-      <p class="lead">
-        近くて、安くて、何度でも。<br>
-        大学生の韓国旅行を、学生目線で探そう。
-      </p>
-
-    </div>
+    <a href="#" class="city-card">
+      <img src="images/jeju.jpg" alt="済州島">
+      <div class="city-info">
+        <h3>Jeju</h3>
+        <p>自然や海を楽しみたい人におすすめの韓国リゾート。</p>
+      </div>
+    </a>
 
   </div>
 
 </section>
 
-
-<!-- CITIES -->
-
-<section>
+<section class="info-section">
 
   <div class="container">
 
-    <div class="head">
+    <div class="section-title">
+      <h2>韓国旅行のポイント</h2>
+      <p>学生旅行ならここをチェック。</p>
+    </div>
 
-      <div>
+    <div class="info-grid">
 
-        <div class="kicker">
-          POPULAR CITIES
-        </div>
-
-        <h2>
-          韓国の人気都市
-        </h2>
-
-        <p class="desc">
-          初めての韓国旅行にもおすすめの3都市。
-        </p>
-
+      <div class="info-card">
+        <h3>✈ 航空券</h3>
+        <p>日本から近く、LCCを利用すれば比較的リーズナブルに旅行できます。</p>
       </div>
 
-    </div>
+      <div class="info-card">
+        <h3>🏨 ホテル</h3>
+        <p>ソウル中心部から少し離れるだけでも宿泊費を抑えられる場合があります。</p>
+      </div>
 
-
-    <div class="cities">
-
-      <!-- SEOUL -->
-
-      <article class="city">
-
-        <div
-          class="city-photo"
-          style="
-            background-image:
-            linear-gradient(rgba(23,63,74,.08),rgba(23,63,74,.08)),
-            url('images/seoul.jpg');
-          ">
-        </div>
-
-        <div class="city-body">
-
-          <small>SEOUL</small>
-
-          <h3>ソウル</h3>
-
-          <p>
-            ショッピング・グルメ・カフェなど、
-            韓国旅行の定番を楽しめる人気都市。
-          </p>
-
-        </div>
-
-      </article>
-
-
-      <!-- BUSAN -->
-
-      <article class="city">
-
-        <div
-          class="city-photo"
-          style="
-            background-image:
-            linear-gradient(rgba(23,63,74,.08),rgba(23,63,74,.08)),
-            url('images/busan.jpg');
-          ">
-        </div>
-
-        <div class="city-body">
-
-          <small>BUSAN</small>
-
-          <h3>釜山</h3>
-
-          <p>
-            海・グルメ・街歩きを楽しみたい人に
-            おすすめの人気都市。
-          </p>
-
-        </div>
-
-      </article>
-
-
-      <!-- JEJU -->
-
-      <article class="city">
-
-        <div
-          class="city-photo"
-          style="
-            background-image:
-            linear-gradient(rgba(23,63,74,.08),rgba(23,63,74,.08)),
-            url('images/jeju.jpg');
-          ">
-        </div>
-
-        <div class="city-body">
-
-          <small>JEJU</small>
-
-          <h3>済州島</h3>
-
-          <p>
-            自然・カフェ・絶景など、
-            ソウルとは違った韓国を楽しめる場所。
-          </p>
-
-        </div>
-
-      </article>
-
-    </div>
-
-  </div>
-
-</section>
-
-
-<!-- BUDGET -->
-
-<section>
-
-  <div class="container">
-
-    <div class="budget">
-
-      <div class="budget-inner">
-
-        <div class="budget-title">
-
-          <div class="kicker">
-            KOREA BUDGET
-          </div>
-
-          <h2>
-            韓国旅行の予算から探す
-          </h2>
-
-          <p>
-            自分の予算に合わせて旅を探そう。
-          </p>
-
-        </div>
-
-
-        <div class="budget-list">
-
-          <a class="budget-card" href="#">
-            〜3万円
-            <span class="arrow">→</span>
-          </a>
-
-          <a class="budget-card" href="#">
-            〜5万円
-            <span class="arrow">→</span>
-          </a>
-
-          <a class="budget-card" href="#">
-            〜7万円
-            <span class="arrow">→</span>
-          </a>
-
-        </div>
-
+      <div class="info-card">
+        <h3>🍜 グルメ</h3>
+        <p>韓国料理やカフェなど、学生旅行で楽しみたいグルメがたくさんあります。</p>
       </div>
 
     </div>
@@ -726,163 +342,17 @@ footer p{
 
 </section>
 
-
-<!-- TRAVEL TIPS -->
-
-<section>
-
-  <div class="container">
-
-    <div class="head">
-
-      <div>
-
-        <div class="kicker">
-          KOREA TRAVEL TIPS
-        </div>
-
-        <h2>
-          韓国旅行のポイント
-        </h2>
-
-        <p class="desc">
-          学生旅行でチェックしておきたいこと。
-        </p>
-
-      </div>
-
-    </div>
-
-
-    <div class="tips">
-
-      <article class="tip">
-
-        <div class="tip-num">
-          01 / FLIGHT
-        </div>
-
-        <h3>
-          航空券を安く探す
-        </h3>
-
-        <p>
-          LCCやセール情報をチェックして、
-          できるだけ旅費を抑えよう。
-        </p>
-
-      </article>
-
-
-      <article class="tip">
-
-        <div class="tip-num">
-          02 / HOTEL
-        </div>
-
-        <h3>
-          ホテルを賢く選ぶ
-        </h3>
-
-        <p>
-          価格だけでなく、駅からの距離や
-          周辺エリアもチェック。
-        </p>
-
-      </article>
-
-
-      <article class="tip">
-
-        <div class="tip-num">
-          03 / MONEY
-        </div>
-
-        <h3>
-          旅費を抑える
-        </h3>
-
-        <p>
-          食事・交通・宿泊など、
-          旅行前に予算を決めておくと安心。
-        </p>
-
-      </article>
-
-    </div>
-
-  </div>
-
-</section>
-
-
-<!-- CTA -->
-
-<section>
-
-  <div class="container">
-
-    <div class="cta">
-
-      <div>
-
-        <h2>
-          次の旅先を探そう。
-        </h2>
-
-        <p>
-          韓国以外の人気旅行先もチェック。
-        </p>
-
-      </div>
-
-      <a href="index.html#destinations" class="cta-button">
-        行き先を見る →
-      </a>
-
-    </div>
-
-  </div>
-
+<section class="cta">
+  <h2>次の旅先を探そう。</h2>
+  <p>UNI TRIPで学生向けの海外旅行をチェック。</p>
+  <a href="index.html" class="button">UNI TRIP TOPへ</a>
 </section>
 
 </main>
 
-
-<!-- FOOTER -->
-
 <footer>
-
-  <div class="container footer">
-
-    <div>
-
-      <div class="footer-logo">
-        UNI TRIP
-      </div>
-
-      <p>
-        大学生の旅を、もっと自由に。
-      </p>
-
-    </div>
-
-    <div>
-
-      <p>
-        Travel smarter. Go further.
-      </p>
-
-      <p>
-        © 2026 UNI TRIP
-      </p>
-
-    </div>
-
-  </div>
-
+  © UNI TRIP
 </footer>
 
 </body>
 </html>
-```
